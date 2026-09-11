@@ -22,7 +22,7 @@ jobs:
           comment-summary-in-pr: always
 
       - name: Create issue when dependency review fails
-        if: failure() && steps.dependency_review.outcome == 'failure'
+        if: always() && steps.dependency_review.outcome == 'failure'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
