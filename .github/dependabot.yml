@@ -1,7 +1,19 @@
 version: 2
+
+multi-ecosystem-groups:
+  infrastructure:
+    schedule:
+      interval: "daily"
+
 updates:
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
+      # Check for updates to GitHub Actions every week
       interval: "daily"
-    open-pull-requests-limit: 10
+
+  - package-ecosystem: "docker"
+    directory: "/"
+    patterns: ["nginx", "redis", "postgres"]
+    multi-ecosystem-group: "infrastructure"
