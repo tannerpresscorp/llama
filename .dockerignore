@@ -1,0 +1,12 @@
+.git
+.venv
+__pycache__/
+*.pyc
+artifacts/
+data/raw/
+llama.cpp/
+env.local
+pretrain_pid.txt
+pretrain_start.txt
+pretrain_run*.log
+*.err.log

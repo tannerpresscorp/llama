@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tiny-llama
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tiny-llama
+  template:
+    metadata:
+      labels:
+        app: tiny-llama
+    spec:
+      containers:
+        - name: llama-server
+          image: ghcr.io/tannerpresscorp/llama-inference:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: LLAMA_HOST
+              value: 0.0.0.0
+            - name: LLAMA_PORT
+              value: "8080"
+            - name: LLAMA_MODEL
+              value: /models/tiny-llama-f16.gguf
+            - name: LLAMA_CONTEXT_SIZE
+              value: "1024"
+          ports:
+            - name: http
+              containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /v1/models
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /v1/models
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          resources:
+            requests:
+              cpu: "1"
+              memory: 2Gi
+            limits:
+              cpu: "2"
+              memory: 4Gi
+          volumeMounts:
+            - name: model-volume
+              mountPath: /models
+              readOnly: true
+      volumes:
+        - name: model-volume
+          persistentVolumeClaim:
+            claimName: llama-models
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tiny-llama
+spec:
+  selector:
+    app: tiny-llama
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+  type: ClusterIP

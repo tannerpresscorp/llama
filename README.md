@@ -143,6 +143,93 @@ Or POST to:
 http://127.0.0.1:8080/v1/completions
 ```
 
+The serve wrappers now accept either CLI parameters or environment variables:
+
+- `LLAMA_BIN` (or legacy `LLAMA`) for the llama.cpp server binary
+- `LLAMA_MODEL` (or legacy `MODEL`) for the GGUF model path
+- `LLAMA_HOST` (or legacy `HOST`) for the bind host
+- `LLAMA_PORT` (or legacy `PORT`) for the bind port
+- `LLAMA_CONTEXT_SIZE` (or legacy `CONTEXT_SIZE`) for the context window
+
+Example Linux/macOS launch:
+
+```bash
+LLAMA_BIN=llama-server \
+LLAMA_MODEL=artifacts/tiny-llama-f16.gguf \
+LLAMA_HOST=0.0.0.0 \
+LLAMA_PORT=8080 \
+./scripts/serve.sh
+```
+
+The smoke test is also configurable for remote or non-default deployments:
+
+```bash
+python scripts/test_api.py --base-url http://127.0.0.1:8080 --model tiny-llama
+```
+
+## 9. Deploy the inference API
+
+This repository now includes a container-first deployment path for inference serving.
+
+### Deployment scope
+
+- Training, tokenizer creation, dataset building, and GGUF conversion stay as offline build steps.
+- Deployment covers the inference API only.
+- The runtime image expects a GGUF file to be mounted into the container or copied into a persistent model volume.
+
+### Build the container image
+
+```bash
+docker build -t tiny-llama-inference .
+```
+
+The Docker image builds `llama.cpp` with server support in a build stage and produces a small runtime image that starts the API through `scripts/serve.sh`.
+
+### Run the container locally
+
+```bash
+docker run --rm \
+  -p 8080:8080 \
+  -e LLAMA_HOST=0.0.0.0 \
+  -e LLAMA_MODEL=/models/tiny-llama-f16.gguf \
+  -v "$(pwd)/artifacts:/models:ro" \
+  tiny-llama-inference
+```
+
+Then verify it:
+
+```bash
+python scripts/test_api.py --base-url http://127.0.0.1:8080
+```
+
+### Kubernetes example
+
+An example manifest lives at:
+
+```text
+deploy/kubernetes/llama.yaml
+```
+
+It assumes:
+
+- the image is published to a registry such as GHCR;
+- the GGUF file is mounted at `/models/tiny-llama-f16.gguf`;
+- a `PersistentVolumeClaim` named `llama-models` already exists.
+
+### CI/CD
+
+GitHub Actions now provide:
+
+- a Windows syntax smoke test for the Python entrypoints;
+- a container build workflow that validates the Docker image on pull requests and can publish it to GHCR on pushes to `main`, tags, or manual runs.
+
+### Operational guidance
+
+- Default to private or internal deployment unless you place the API behind your own authentication and rate limiting layer.
+- Version both the container image and the GGUF model artifact so you can roll back them independently.
+- Size CPU, memory, and disk for the chosen GGUF and context window. The default tiny model is suitable for experimentation, not high-throughput production traffic.
+- The container health check targets `/v1/models`, so a healthy instance indicates the HTTP API is up and the model has loaded.
+
 ## Scaling presets
 
 Start with the default. Once the pipeline is proven, scale one variable at a time.

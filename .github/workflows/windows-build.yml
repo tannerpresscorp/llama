@@ -15,7 +15,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7.0.1
 
-      - name: Build
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Syntax smoke test
         shell: pwsh
         run: |
-          Write-Host "No build system is currently defined for this repository."
+          python -m py_compile src\common.py src\build_dataset.py src\train_tokenizer.py src\pretrain.py src\evaluate.py scripts\convert_to_gguf.py scripts\test_api.py
