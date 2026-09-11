@@ -24,6 +24,7 @@ jobs:
         shell: pwsh
         run: |
           python -m py_compile src\common.py src\build_dataset.py src\train_tokenizer.py src\pretrain.py src\evaluate.py scripts\convert_to_gguf.py scripts\test_api.py
+          bash -n scripts/serve.sh
           $errors = $null
           [System.Management.Automation.Language.Parser]::ParseFile("scripts\serve.ps1", [ref]$null, [ref]$errors) | Out-Null
           if ($errors.Count -gt 0) {

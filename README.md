@@ -212,7 +212,7 @@ deploy/kubernetes/llama.yaml
 
 It assumes:
 
-- replace `REPOSITORY_OWNER` in the image reference with your GitHub repository owner when using the included GHCR workflow, or replace the full image reference if you publish elsewhere;
+- replace `REPOSITORY_OWNER` and `RELEASE_TAG` in the image reference with the published image owner and version, or replace the full image reference if you publish elsewhere;
 - the image is published to a registry such as GHCR;
 - the GGUF file is mounted at `/models/tiny-llama-f16.gguf`;
 - a `PersistentVolumeClaim` named `llama-models` already exists.

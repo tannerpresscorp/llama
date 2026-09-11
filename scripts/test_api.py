@@ -13,9 +13,9 @@ def main() -> None:
         "--prompt",
         default=os.environ.get("LLAMA_API_PROMPT", "The purpose of a language model is"),
     )
-    ap.add_argument("--max-tokens", type=int, default=int(os.environ.get("LLAMA_API_MAX_TOKENS", "32")))
-    ap.add_argument("--temperature", type=float, default=float(os.environ.get("LLAMA_API_TEMPERATURE", "0.8")))
-    ap.add_argument("--timeout", type=float, default=float(os.environ.get("LLAMA_API_TIMEOUT", "30")))
+    ap.add_argument("--max-tokens", type=int, default=os.environ.get("LLAMA_API_MAX_TOKENS", "32"))
+    ap.add_argument("--temperature", type=float, default=os.environ.get("LLAMA_API_TEMPERATURE", "0.8"))
+    ap.add_argument("--timeout", type=float, default=os.environ.get("LLAMA_API_TIMEOUT", "30"))
     args = ap.parse_args()
 
     payload = {
