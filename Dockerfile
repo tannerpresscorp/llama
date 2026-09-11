@@ -38,6 +38,6 @@ ENV LLAMA_BIN=/usr/local/bin/llama-server \
 EXPOSE 8080
 VOLUME ["/models"]
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=5 CMD ["/bin/sh", "-c", "curl --fail --silent http://127.0.0.1:${LLAMA_PORT}/v1/models >/dev/null"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=5 CMD curl --fail --silent "http://127.0.0.1:${LLAMA_PORT}/v1/models" >/dev/null || exit 1
 
 ENTRYPOINT ["/app/scripts/serve.sh"]

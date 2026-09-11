@@ -212,6 +212,7 @@ deploy/kubernetes/llama.yaml
 
 It assumes:
 
+- replace `OWNER` in the image reference with your registry namespace;
 - the image is published to a registry such as GHCR;
 - the GGUF file is mounted at `/models/tiny-llama-f16.gguf`;
 - a `PersistentVolumeClaim` named `llama-models` already exists.
@@ -226,7 +227,7 @@ GitHub Actions now provide:
 ### Operational guidance
 
 - Default to private or internal deployment unless you place the API behind your own authentication and rate limiting layer.
-- Version both the container image and the GGUF model artifact so you can roll back them independently.
+- Version both the container image and the GGUF model artifact so you can roll them back independently.
 - Size CPU, memory, and disk for the chosen GGUF and context window. The default tiny model is suitable for experimentation, not high-throughput production traffic.
 - The container health check targets `/v1/models`, so a healthy instance indicates the HTTP API is up and the model has loaded.
 
