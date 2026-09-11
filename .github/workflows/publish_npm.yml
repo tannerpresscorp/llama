@@ -2,7 +2,7 @@ name: Publish npm package
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -15,5 +15,6 @@ concurrency:
 
 jobs:
   publish:
+    name: Publish to npm
     uses: ./.github/workflow-templates/npm-publish.yml
     secrets: inherit
