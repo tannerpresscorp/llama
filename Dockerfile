@@ -1,7 +1,7 @@
 FROM ubuntu:24.04 AS build
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG LLAMA_CPP_REF=master
+ARG LLAMA_CPP_REF=v0.4.0
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends build-essential ca-certificates cmake git \

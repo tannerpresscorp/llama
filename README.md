@@ -183,7 +183,7 @@ This repository now includes a container-first deployment path for inference ser
 docker build -t tiny-llama-inference .
 ```
 
-The Docker image builds `llama.cpp` with server support in a build stage and produces a small runtime image that starts the API through `scripts/serve.sh`.
+The Docker image builds `llama.cpp` with server support in a build stage from a pinned upstream tag and produces a small runtime image that starts the API through `scripts/serve.sh`.
 
 ### Run the container locally
 

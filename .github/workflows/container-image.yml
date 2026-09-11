@@ -2,21 +2,11 @@ name: Container Image
 
 on:
   pull_request:
-    paths:
-      - Dockerfile
-      - .dockerignore
-      - scripts/serve.sh
-      - .github/workflows/container-image.yml
   push:
     branches:
       - main
     tags:
       - "v*"
-    paths:
-      - Dockerfile
-      - .dockerignore
-      - scripts/serve.sh
-      - .github/workflows/container-image.yml
   workflow_dispatch:
 
 permissions:
