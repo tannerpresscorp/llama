@@ -26,6 +26,20 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          existing_issue_number="$(
+            gh issue list \
+              --repo "${{ github.repository }}" \
+              --state open \
+              --search "\"Dependency review failed for PR #${{ github.event.pull_request.number }}\" in:title" \
+              --json number \
+              --jq '.[0].number'
+          )"
+
+          if [ -n "$existing_issue_number" ]; then
+            echo "Open issue #$existing_issue_number already exists for PR #${{ github.event.pull_request.number }}."
+            exit 0
+          fi
+
           gh issue create \
             --repo "${{ github.repository }}" \
             --title "Dependency review failed for PR #${{ github.event.pull_request.number }}" \
