@@ -1,0 +1,4 @@
+instructions: Use pnpm, not npm. Prefix branch with feat/ or fix/. Run lint before committing.
+automation:
+  auto_issue_session: true
+  remote_control: true

@@ -1,0 +1,2130 @@
+Information Technology Laboratory 
+ERDC/ITL SR-23-1 
+DISTRIBUTION STATEMENT A. Approved for public release; distribution is unlimited. 
+Stephen C. Spangler, Roger Fujan, Gerald Piotrowski, and 
+Brian Baker 
+Release 2.2  
+August 2023 
+A/E/C Graphics Standard 
+for Facilities, Infrastructure, and Environment 
+The CAD/BIM Technology Center 
+The US Army Engineer Research and Development Center (ERDC) solves 
+the nation’s toughest engineering and environmental challenges. ERDC develops 
+innovative solutions in civil and military engineering, geospatial sciences, water 
+resources, and environmental sciences for the Army, the Department of Defense, 
+civilian agencies, and our nation’s public good. Find out more at www.erdc.usace.army.mil. 
+To search for other technical reports published by ERDC, visit the ERDC online library 
+at https://erdclibrary.on.worldcat.org/discovery. 
+The CAD/BIM Technology Center for 
+Facilities, Infrastructure, and Environment 
+A/E/C Graphics Standard 
+Release 2.2 
+Stephen C. Spangler 
+US Army Engineer Research and Development Center 
+Information Technology Laboratory 
+The CAD/BIM Technology Center 
+3909 Halls Ferry Road 
+Vicksburg, MS 39180-6199 
+Roger Fujan 
+US Army Corps of Engineers, Walla Walla District 
+3200 Reservoir Road 
+Walla Walla, WA 99362 
+Gerald Piotrowski 
+US Army Corps of Engineers, Louisville District 
+600 Dr. Martin Luther King Jr. Place 
+Louisville, KY 40202-2239 
+Brian Baker 
+US Army Corps of Engineers, Pittsburgh District 
+1000 Liberty Ave. 
+Pittsburgh, PA 15222-4004 
+Final Report 
+ERDC/ITL SR-23-1 
+August 2023 
+DISTRIBUTION STATEMENT A. Approved for public release; distribution is unlimited. 
+Prepared for Headquarters, US Army Corps of Engineers 
+Washington, DC 20314-1000 
+Under Civil Direct Funding 
+ERDC/ITL SR-23-1 
+ii 
+Abstract 
+The A/E/C Graphics Standard Release 2.2 has been developed by the 
+Computer-Aided Design/Building Information Modeling Technology 
+Center to document how proper hand-drafting practices can be achieved 
+in advanced modeling. It is through the collection and documentation of 
+these practices that consistent models and drawings shall be achieved 
+throughout the US Army Corps of Engineers (USACE), as well as other 
+federal agencies. In the collection of these practices, various historical 
+USACE District drafting manuals were consulted and compared against 
+practices contained in industry and national standards, with consideration 
+toward whether software can achieve those practices. The documentation 
+of these practices will help to achieve both clear and aesthetically pleasing 
+construction documents. 
+DISCLAIMER: The contents of this report are not to be used for advertising, publication, or promotional purposes. 
+Citation of trade names does not constitute an official endorsement or approval of the use of such commercial products. 
+All product names and trademarks cited are the property of their respective owners. The findings of this report are not to 
+be construed as an official Department of the Army position unless so designated by other authorized documents. 
+DESTROY THIS REPORT WHEN NO LONGER NEEDED. DO NOT RETURN IT TO THE ORIGINATOR. 
+ERDC/ITL SR-23-1 iii 
+Contents 
+Abstract .......................................................................................................................................................... ii 
+Figures and Tables ........................................................................................................................................ vi 
+Preface ........................................................................................................................................................... ix 
+1 Introduction ............................................................................................................................................ 1 
+1.1 Background ..................................................................................................................... 1 
+1.2 United States National Computer-Aided Design (CAD) Standard ................................ 2 
+1.3 Objectives ........................................................................................................................ 2 
+1.4 Approach ......................................................................................................................... 2 
+1.5 Scope ............................................................................................................................... 3 
+1.6 Essentials of Good Drafting ........................................................................................... 3 
+1.7 Additions/Revisions ........................................................................................................ 4 
+2 Border and Cover Sheets ..................................................................................................................... 5 
+2.1 Border Sheets ................................................................................................................. 5 
+2.1.1 Sheet Sizes ......................................................................................................... 5 
+2.1.2 Sheet Margins .................................................................................................... 5 
+2.1.3 Border Sheet Areas ............................................................................................ 6 
+2.1.4 Production Data Area ......................................................................................... 6 
+2.1.5 Drawing Area ...................................................................................................... 7 
+2.1.6 Title Block Area ................................................................................................ 10 
+2.1.7 Designer Identification Block .......................................................................... 11 
+2.1.8 Revision (Issue) Block ...................................................................................... 12 
+2.1.9 Management Block .......................................................................................... 12 
+2.1.10 Project Identification / Sheet Title Block ........................................................ 14 
+2.1.11 Sheet Identification Block ............................................................................... 15 
+2.1.12 Status ............................................................................................................... 16 
+2.2 Cover Sheet ................................................................................................................... 16 
+2.2.1 Owner/Designer Information........................................................................... 17 
+2.2.2 Project/Contract Information (Part 1) ............................................................. 18 
+2.2.3 Project Rendering / Small Location Map Area ............................................... 18 
+2.2.4 Project/Contract Information (Part 2) ............................................................. 19 
+2.2.5 Signature Block Area ....................................................................................... 20 
+2.2.6 Small Project Index / A-E Stamps Area ........................................................... 20 
+2.3 Marking Controlled Unclassified Information (CUI) Construction Drawings .............. 21 
+3 Orientation ............................................................................................................................................ 24 
+3.1 Common ........................................................................................................................ 24 
+3.1.1 Project Orientation Hierarchy .......................................................................... 24 
+3.1.2 Views ................................................................................................................. 24 
+3.1.3 Vicinity Maps .................................................................................................... 25 
+3.1.4 Plan Views ........................................................................................................ 26 
+ERDC/ITL SR-23-1 iv 
+3.2 Horizontal ...................................................................................................................... 26 
+3.2.1 Project Coordinate System .............................................................................. 26 
+3.2.2 Channels and Waterways ................................................................................ 26 
+3.2.3 Locks and Dams .............................................................................................. 28 
+3.2.4 Levees .............................................................................................................. 29 
+3.2.5 Roadways ......................................................................................................... 29 
+3.3 Vertical........................................................................................................................... 30 
+3.3.1 Column Grid System ........................................................................................ 30 
+3.3.2 Numbering of Floors ........................................................................................ 30 
+3.3.3 Numbering of Rooms ....................................................................................... 30 
+3.3.4 Numbering of Doors ......................................................................................... 32 
+3.3.5 Identification of Windows ................................................................................ 33 
+3.3.6 Numbering of Stairs ......................................................................................... 33 
+3.3.7 Numbering of Elevators ................................................................................... 33 
+3.3.8 Labeling of Duct ............................................................................................... 33 
+4 Drawing Symbology ............................................................................................................................ 35 
+4.1 Corps Castle .................................................................................................................. 35 
+4.2 Symbols ......................................................................................................................... 36 
+4.2.1 Symbol Descriptions ........................................................................................ 36 
+4.2.2 Symbol Identifiers ............................................................................................ 36 
+4.2.3 Drawing Block Title .......................................................................................... 36 
+4.2.4 Elevations, Sections, and Details .................................................................... 40 
+4.2.5 Welding Symbols .............................................................................................. 43 
+4.3 Linework ........................................................................................................................ 45 
+4.3.1 Showing New Work vs. Demolition Work ........................................................ 47 
+4.3.2 Showing New Work vs. Existing Conditions .................................................... 48 
+5 Drawing Annotation ............................................................................................................................ 49 
+5.1 Text ................................................................................................................................ 49 
+5.1.1 Font ................................................................................................................... 49 
+5.1.2 Text Height........................................................................................................ 50 
+5.1.3 Orientation and Placement ............................................................................. 52 
+5.1.4 Capitalization.................................................................................................... 53 
+5.1.5 Leader Terminators.......................................................................................... 54 
+5.2 Note Block ..................................................................................................................... 54 
+5.2.1 General Notes .................................................................................................. 58 
+5.2.2 General Discipline Notes ................................................................................. 58 
+5.2.3 General Sheet Notes........................................................................................ 59 
+5.2.4 Sheet Keynotes ................................................................................................ 60 
+5.2.5 Abbreviations ................................................................................................... 61 
+5.2.6 Legend .............................................................................................................. 62 
+5.2.7 Key Plan ............................................................................................................ 62 
+5.3 Callouts.......................................................................................................................... 62 
+5.4 Notes with Leader(s)..................................................................................................... 63 
+5.5 Dimensions ................................................................................................................... 64 
+ERDC/ITL SR-23-1 v 
+5.5.1 Dimension Placement...................................................................................... 64 
+5.5.2 Graphic Settings ............................................................................................... 64 
+5.5.3 Dimension Terminators ................................................................................... 65 
+5.5.4 Fractions ........................................................................................................... 66 
+5.5.5 Graphic Settings ............................................................................................... 67 
+5.5.6 Dimensioning in Metric (SI) ............................................................................. 68 
+5.6 Elevations ...................................................................................................................... 70 
+5.7 Alignments .................................................................................................................... 70 
+5.8 Match Lines ................................................................................................................... 71 
+6 Schedules ............................................................................................................................................. 73 
+6.1 Features of a Schedule ................................................................................................ 73 
+6.2 Graphic Settings ........................................................................................................... 73 
+6.3 Excel Schedules ............................................................................................................ 74 
+7 Drawing Revisions .............................................................................................................................. 76 
+7.1 Revision Designations .................................................................................................. 76 
+7.2 Revision Graphics ......................................................................................................... 76 
+7.3 Revision (Issue) Block .................................................................................................. 77 
+8 Conclusion ............................................................................................................................................ 80 
+References ................................................................................................................................................... 81 
+Abbreviations ............................................................................................................................................... 82 
+ 
+ERDC/ITL SR-23-1 vi 
+Figures and Tables 
+Figures 
+2-1. Three main areas of the border sheet. ................................................................................... 6 
+2-2. Production data area. .............................................................................................................. 7 
+2-3. Module and drawing block. ..................................................................................................... 8 
+2-4. Examples of correctly and incorrectly sized drawing blocks. ................................................ 9 
+2-5. Incorrect and correct drawing block adjacencies. ................................................................. 9 
+2-6. Vertical title block. ................................................................................................................. 11 
+2-7. Designer identification block with example Owner Communication Marks. ...................... 12 
+2-8. Management block. ............................................................................................................... 12 
+2-9. Project Identification / Sheet Title block. ............................................................................. 14 
+2-10. Sheet Identification block. .................................................................................................. 15 
+2-11. Status field. .......................................................................................................................... 16 
+2-12. Cover sheet. ......................................................................................................................... 17 
+2-13. Owner/Designer information. ............................................................................................. 18 
+2-14. Link between Project/Contract information on Cover Sheet and Border Sheet. ............. 18 
+2-15. Project rendering / small location map area (example rendering shown). ...................... 19 
+2-16. Project/contract information (Part 2) area. ....................................................................... 19 
+2-17. Signature block area (example signature block shown). .................................................. 20 
+2-18. Small project index / A-E stamps area (example index shown). ....................................... 21 
+2-19. Process flowchart for CUI determination. .......................................................................... 22 
+2-20. Cover sheet with CUI markings (locations may vary). ........................................................ 23 
+3-1. Proper orientation of detail views. ........................................................................................ 25 
+3-2. Grid system described in general notes (example shown). ................................................. 26 
+3-3. Typical orientation of cross sections. ................................................................................... 28 
+3-4. Orientation of roadways. ....................................................................................................... 29 
+3-5. Room identifier symbol. ......................................................................................................... 31 
+3-6. Room numbering example. ................................................................................................... 31 
+3-7. Door mark symbol. ................................................................................................................. 32 
+3-8. Numbering of doors. .............................................................................................................. 32 
+3-9. Window identifier symbol. ..................................................................................................... 33 
+3-10. Duct labeling. ....................................................................................................................... 34 
+4-1. US Army Corps of Engineers Communication Mark (commonly known as the Corps 
+Castle). .................................................................................................................................. 35 
+4-2. Placement of Field Operating Activity (FOA) signature in USACE Communication Mark. .. 35 
+4-3. Drawing block title identification symbol. ............................................................................. 37 
+4-4. Exaggerated scale examples................................................................................................. 38 
+4-5. Not to scale example. ............................................................................................................ 38 
+4-6. North arrow. ........................................................................................................................... 39 
+ERDC/ITL SR-23-1 vii 
+4-7. Back-referencing method using the drawing block title. ..................................................... 40 
+4-8. Elevation indicator symbol. ................................................................................................... 41 
+4-9. Section indicator symbol. ...................................................................................................... 41 
+4-10. Detail indicator symbol. ...................................................................................................... 42 
+4-11. Building ID placement. ........................................................................................................ 42 
+4-12. Typical welding symbols. ..................................................................................................... 43 
+4-13. Weld symbols. ...................................................................................................................... 44 
+4-14. Types of lines and associated line weights. ....................................................................... 46 
+5-1. Orientation of text. ................................................................................................................. 53 
+5-2. Capitalization in text. ............................................................................................................. 53 
+5-3. Terminator examples. ............................................................................................................ 54 
+5-4. Location of note block area................................................................................................... 55 
+5-5. Full sheet of notes examples. ............................................................................................... 55 
+5-6. Full sheet of notes examples. ............................................................................................... 56 
+5-7. Hierarchy of categories. ......................................................................................................... 57 
+5-8. Hierarchy of numbered notes. .............................................................................................. 58 
+5-9. General discipline notes. ....................................................................................................... 59 
+5-10. General discipline notes (if using Level 2 discipline designators).................................... 59 
+5-11. General sheet notes (individual sheet). ............................................................................. 60 
+5-12. General sheet notes (range of sheets). .............................................................................. 60 
+5-13. Keynote symbol (with and without leader). ........................................................................ 61 
+5-14. Sheet keynotes (note block). .............................................................................................. 61 
+5-15. Callout symbol (with and without leader). .......................................................................... 63 
+5-16. Location and alignment of note leaders. ........................................................................... 63 
+5-17. Positioning of text in dimensions. ....................................................................................... 64 
+5-18. Dimension settings. ............................................................................................................. 65 
+5-19. Parallel dimension line spacing. ......................................................................................... 65 
+5-20. Filled arrowhead terminators.............................................................................................. 66 
+5-21. Slash terminators. ............................................................................................................... 66 
+5-22. Fraction format. ................................................................................................................... 67 
+5-23. Dimension element settings. .............................................................................................. 68 
+5-24. Dimension in millimeters, always shown as a whole number. ......................................... 69 
+5-25. Dimension in meters, always shown as a real number (with decimal). ........................... 69 
+5-26. Proper dimension presentations for metric measurements with four or more digits. .... 70 
+5-27. Match lines. ......................................................................................................................... 72 
+5-28. Format for match line fields. ............................................................................................... 72 
+6-1. Schedule. ............................................................................................................................... 73 
+6-2. Schedule linework and text. .................................................................................................. 74 
+6-3. Excel example. ....................................................................................................................... 74 
+6-4. Excel border settings. ............................................................................................................ 75 
+ERDC/ITL SR-23-1 viii 
+7-1. Revision indicator with revision cloud. ................................................................................. 76 
+7-2. Revision (Issue) block. ........................................................................................................... 77 
+7-3. Option 1 for showing more than eight revisions. ................................................................. 78 
+7-4. Option 2 for showing more than eight revisions. ................................................................. 79 
+Tables 
+2-1. ANSI and ISO sheet size comparison. .................................................................................... 5 
+4-1. Common welding processes. ................................................................................................ 45 
+5-1. Comparison of font types. ..................................................................................................... 49 
+5-2. Vertical discipline: allowable text heights. ........................................................................... 50 
+5-3. Horizontal discipline: allowable text heights. ....................................................................... 50 
+5-4. Inch-pound text heights and line type scales. ...................................................................... 51 
+5-5. Metric text heights and line type scales. .............................................................................. 52 
+5-6. Terminator sizing. .................................................................................................................. 54 
+5-7. Dimension element settings. ................................................................................................ 67 
+ 
+  
+ERDC/ITL SR-23-1 
+ix 
+Preface 
+This study was conducted for Headquarters, US Army Corps of Engineers 
+(HQUSACE). The technical monitor was Mr. Jason Fairchild, HQUSACE. 
+The work was led by Mr. Stephen C. Spangler of the Computer-Aided 
+Design / Building Information Modeling Technology Center of the 
+Software Engineering and Informatics Division, US Army Engineer 
+Research and Development Center, Information Technology Laboratory. 
+At the time of publication, Ms. Mariangelica Carrasquillo Mangual was 
+branch chief; Mr. Quincy Alexander was division chief; and Dr. Robert M. 
+Wallace and Mr. Ken Pathak were technical directors. The deputy director 
+was Dr. Jackie S. Pettway, and the director was Dr. David A. Horner. 
+COL Christian Patterson was commander of ERDC, and Dr. David W. 
+Pittman was director. 
+This page intentionally left blank. 
+ERDC/ITL SR-23-1 
+1 
+1 Introduction 
+The A/E/C Graphics Standard Release 2.2 has been developed by the 
+Computer-Aided Design/Building Information Modeling (CAD/BIM) 
+Technology Center (hereafter referred to as the Center) for Facilities, 
+Infrastructure, and Environment at the Information Technology 
+Laboratory (ITL), US Army Engineer Research and Development Center 
+(ERDC), Vicksburg, MS. Its purpose is to address a need for standard 
+CAD, BIM, and Civil Information Modeling (CIM) drafting practices that 
+were once covered by documents related to hand drafting techniques. This 
+report supersedes A/E/C Graphics Standard Release 2.1 (ERDC/ITL TR
+19-6). 
+1.1 Background 
+The A/E/C CAD Standard (CAD/BIM Technology Center 2019), first 
+published in May 1994, has been the go-to manual for developing CAD 
+documents for tri-service (Army, Air Force, and Navy) A/E/C 
+(architecture/engineering/construction) disciplines. The Standard defines 
+symbology, graphic representations, and layer breakouts within the 
+different types of CAD files the A/E/C disciplines typically create. 
+However, what it does not cover are the good practices behind CAD 
+drafting. These practices were required learning for all new architects, 
+engineers, and draftsmen when hand drafting was the only way of creating 
+construction documents. With the incorporation of CAD into design, these 
+practices were lost along the way. The US Army Corps of Engineers 
+(USACE) CAD/BIM Community of Practice (CoP) recognized this fact and 
+tasked the Center to develop a manual reintroducing these practices, 
+updating them to fit into the CAD/BIM/CIM workflow. 
+In the development of this manual, the Center collected many District 
+drafting standards, compared them, and compiled similarities. Where 
+applicable, the practices pulled from these drafting standards were 
+compared with those of industry and national standards since those 
+documents address drafting to a certain extent. In situations where 
+industry and national standards did not make a strong statement as to a 
+drafting methodology, the USACE drafting standards were considered to 
+be the expert opinion and took priority in decisions. 
+ERDC/ITL SR-23-1 
+2 
+1.2 United States National Computer-Aided Design (CAD) Standard 
+In 1995, the combined resources of the Center, the American Institute of 
+Architects (AIA), the Construction Specifications Institute (CSI), the 
+United States Coast Guard, the Sheet Metal and Air Conditioning 
+Contractors National Association (SMACNA), the General Services 
+Administration (GSA), and the National Institute of Building Sciences 
+(NIBS) Facility Information Council began an effort to develop a single 
+CAD standard for the United States. Working together, these organizations 
+agreed to develop an integrated set of documents that collectively would 
+represent the United States National CAD Standard (NCS). 
+The primary NCS document referenced within the A/E/C Graphics 
+Standard is the following: 
+“Uniform Drawing System” 
+The Construction Specifications Institute 
+123 North Pitt Street, Suite 450 
+Alexandria, VA 22314 
+This document is available as part of the NCS to all USACE personnel 
+through an enterprise license with NIBS. Additional information on the 
+NCS can be obtained from the following: 
+National Institute of Building Sciences 
+1090 Vermont Avenue NW, Suite 700 
+Washington, DC 20005-4905 
+https://www.nibs.org/ 
+https://www.nationalcadstandard.org/ 
+1.3 Objectives 
+The objective of the A/E/C Standards is to ensure design intent is 
+consistently, efficiently, and effectively transmitted through the 
+construction phase to operations and maintenance (O&M) and back to 
+design for future work. 
+1.4 Approach 
+The approach chosen to respond to A/E/C community comments and 
+feedback entailed reviewing the concern and/or recommendation. If the 
+ERDC/ITL SR-23-1 
+3 
+comment was from a purely personal preference standpoint, it was 
+disregarded. If the comment proposed an objective opportunity for 
+improvement, a workaround was determined to best resolve the issue 
+while still maintaining the intent of industry standards. A Frequently 
+Asked Questions (FAQ) page was established to document the interim 
+solutions. This document updates the A/E/C Standards to incorporate 
+those solutions. 
+The intent of this document is to embrace the National CAD Standard 
+while providing more guidance and clarifying areas of misunderstanding. 
+This document will not cover every circumstance encountered in drawing 
+production. There may be specialized instances where it will be up to the 
+site to develop internal best practices. 
+1.5 Scope 
+This manual provides guidance for preparing the presentation of A/E/C 
+designs within the Department of Defense (DoD). 
+1.6 Essentials of Good Drafting 
+Why bother with developing a manual that addresses drafting practices? 
+The A/E/C CAD Standard already implements practices in the formation 
+and presentation of final CAD files; isn’t that enough? The US Army 
+Engineer District, Jacksonville, Drafting Standards manual (US Army 
+Engineer District, Jacksonville 1976) states the reason best in the 
+“Essentials of Good Drafting” section: 
+A well-prepared drawing, complete so that it conveys 
+the intended meaning yet contains a minimum of 
+unnecessary detail, is the type of drawing which is 
+required. Such a drawing, when [correctly] prepared, 
+reflects credit to the [engineer, architect], or 
+draftsman who was responsible for it. While the 
+principal object in working up drawings is to produce 
+a neat, accurate set of plans in the shortest possible 
+time, it is not the intention to sacrifice neatness and 
+accuracy for speed or vice versa. When making 
+alterations or additions to existing drawings, special 
+care shall be exercised to follow the same style and 
+ERDC/ITL SR-23-1 
+4 
+size of lettering and all other conventions on the 
+drawings for uniformity. 
+In addition to this reason, agencies should constantly strive for a sense of 
+consistency. This results in a more unified workplace as all architects, 
+engineers, drafters, and partners are following a consistent set of rules and 
+guidelines. 
+1.7 Additions/Revisions 
+This Standard is intended to be neither static nor all inclusive. Suggestions 
+for improvements are strongly encouraged so that subsequent updates will 
+reflect the input and needs of the users. 
+Recommendations or suggested additions should be sent by email to 
+CADBIM@usace.army.mil.  
+ERDC/ITL SR-23-1 
+5 
+2 Border and Cover Sheets 
+Note: In an effort to make sheets more consistent across all agencies, the 
+only border and cover sheets that shall be used are those defined in this 
+section. This supersedes all previous border definitions from all other 
+various locations. The border and cover sheet files can be found in the 
+latest workspace and templates on the Center’s website: 
+https://cadbimcenter.erdc.dren.mil/. 
+2.1 Border Sheets 
+2.1.1 Sheet Sizes 
+A/E/C projects (contract documents) shall be prepared on American 
+National Standards Institute (ANSI) D sheets (ANSI E or F may be used 
+for oversized drawings [e.g., installation master plans and drawings for 
+civil works projects]). For international projects, International 
+Organization for Standardization (ISO) A1 sheets are to be used (ISO A0 
+may be used for oversized drawings). Table 2-1 lists the standard sizes of 
+ANSI and ISO sheets. 
+Table 2-1. ANSI and ISO sheet size comparison. 
+ANSI 
+Mark 
+Size in inches 
+Mark 
+ISO 
+Size in inches (mm) 
+F 
+28.0 × 40.0 
+NA 
+NA 
+E 
+34.0 × 44.0 
+A0 
+33.1 × 46.8 (841 × 1,189 mm) 
+D 
+22.0 × 34.0 
+A1 
+23.4 × 33.1 (594 × 841 mm) 
+C 
+17.0 × 22.0 
+A2 
+16.5 × 23.4 (420 × 594 mm) 
+B 
+11.0 × 17.0 
+A3 
+11.7 × 16.5 (297 × 420 mm) 
+A 
+8.5 × 11.0 
+A4 
+8.3 × 11.7 (210 × 297 mm) 
+2.1.2 Sheet Margins 
+The minimum distance from the paper's edge to any item in a design is 
+3/16 inch (in.). Borders and related data (grid callouts and production 
+data) shall be centered vertically in the space and shifted to the right as far 
+as practical to maintain a binding edge on the left. The borders provided 
+by the Center shall be used for all printed contract and O&M designs (not 
+including shop drawings). This includes both electronic (PDF) and hard 
+copies. 
+ERDC/ITL SR-23-1 
+6 
+2.1.3 Border Sheet Areas 
+The border sheet is broken out into three main areas. These areas are the 
+Production Data Area, the Drawing Area, and the Title Block Area (Figure 
+2-1). Of these three areas, only the Production Data Area is optional. 
+Figure 2-1. Three main areas of the border sheet. 
+2.1.4 Production Data Area 
+The Production Data Area contains detailed production information about 
+the sheet. The information is located outside of the Drawing Area border 
+in the upper right corner of the sheet (Figure 2-2). 
+ERDC/ITL SR-23-1 
+7 
+Figure 2-2. Production data area. 
+As mentioned, use of this area is optional. Examples of information that 
+could be provided in the Production Data Area include 
+• full path and file name; 
+• date/time the sheet was plotted; 
+• name of the user who plotted the sheet; 
+• plot driver and design script used to plot the sheets; and 
+• plot scale of the sheet. 
+Note: The default text is commented with percent signs (%) to allow for 
+text substitution via design scripts, pen tables, or attributes/tags. 
+2.1.5 Drawing Area 
+The Drawing Area is where graphic/textual items (e.g., plans, sections, 
+elevations, schedules, details, notes) used to convey the project design 
+ERDC/ITL SR-23-1 
+8 
+intent are placed. The Drawing Area is broken up into modules for the 
+placement of these items. To identify module locations within the Drawing 
+Area, a grid is labeled with characters going in alphabetical order (A, B, C, 
+D, etc.) from lower left to top left and characters going in numerical order 
+(1, 2, 3, 4, etc.) from upper left to upper right. To avoid confusion, the 
+alphabetic characters I and O are not used. 
+The Border Sheet provided by the Center uses modules measuring 
+1-1/2 in. × 1-1/2 in. Multiple modules can be combined to create a drawing 
+block (Figure 2-3). When using a drawing block, the lower left corner is 
+referenced to a grid intersection (See Section 4.2.3.1 for information on 
+how to reference the grid). Graphic items are required to fit exactly within 
+the drawing block; they are allowed to take up more than one module in 
+the vertical and/or horizontal direction (Figure 2-4). However, if a graphic 
+item does not fill up a complete drawing block, other items are not allowed 
+to take up the remainder of the block’s space. Instead, that item shall be 
+placed in the next available drawing block (Figure 2-5). 
+Figure 2-3. Module and drawing block. 
+ERDC/ITL SR-23-1 
+9 
+Figure 2-4. Examples of correctly and incorrectly sized drawing blocks. 
+Figure 2-5. Incorrect and correct drawing block adjacencies. 
+ERDC/ITL SR-23-1 
+10 
+If general notes, keynotes, legends, or key plans are included on a sheet, 
+they shall be located in the rightmost modules. The key plan shall always 
+be located within the lowest module of this area. 
+2.1.6 Title Block Area 
+The A/E/C Graphics Standard requires the use of a vertical title block 
+placed in the right-hand margin of the border sheet as shown in Figure 
+2-6. Use of a vertical title block allows for the most usable drawing area on 
+a sheet. The vertical title block also ensures the most prevalent and 
+pertinent information remains at the bottom right of the sheet. The title 
+block area shall include the following: 
+• Designer Identification block 
+• Revision (Issue) block 
+• Management block 
+• Project Identification/Sheet Title block 
+• Sheet Identification block 
+ERDC/ITL SR-23-1 
+11 
+Figure 2-6. Vertical title block. 
+Note: The blocks contained in the Title Block Area shall not be resized or 
+modified. 
+2.1.7 Designer Identification Block 
+The Designer Identification Block (Figure 2-7) contains the logo and/or 
+name of the agency that is the owner of the sheet. The Owner 
+Communication Mark is inserted into the border to represent the owner of 
+the information (typically the Issuing Agency responsible for the project). 
+No modification of either the symbology or text within the Communication 
+Mark shall be allowed. Designers shall refrain from reducing the size of the 
+Communication Mark to add text identifying a specific organization/site 
+within the Designer Identification Block. Instead, that information shall be 
+added to the Management Block. 
+ERDC/ITL SR-23-1 
+12 
+Figure 2-7. Designer identification block with example Owner Communication Marks. 
+Example: Using the US Army Corps of Engineers Communication Mark 
+only in the Designer Identification Block provides for consistency within 
+USACE and eliminates duplicating information contained elsewhere on 
+the Border Sheet (see Section 4.1). 
+2.1.8 Revision (Issue) Block 
+See Section 7.3 Revision (Issue) Block. 
+2.1.9 Management Block 
+The Management block (Figure 2-8) contains information about the 
+owner, the design firm, sheet data, and project management data. All text 
+placed within this block shall be 3/32 in. high. 
+Figure 2-8. Management block. 
+OWNER: The top-left portion of the Management block is dedicated to 
+the owner of the information (i.e., issuing agency overseeing the project). 
+Four lines are provided for this information. The top line shall always be 
+the Issuing Agency (e.g., US Army Corps of Engineers, US Air Force, etc.). 
+The second line shall identify the specific Office (e.g., Vicksburg District, 
+Tyndall AFB, etc.). The third line shall identify the street address (e.g., 
+4155 Clay Street). The fourth line shall identify the city, state, and ZIP code 
+(e.g., Vicksburg, MS 39183). 
+ERDC/ITL SR-23-1 
+13 
+DESIGN FIRM: The bottom left portion of the Management block shall 
+capture information about the design firm (A–E firm, District, or Base) 
+that did the design on that particular sheet. Four lines are provided to 
+provide the name and address of that design firm, similar to the Owner 
+portion above. If desired, an A–E firm may substitute a logo for this 
+information. 
+Note: Districts performing design work internally may leave the Design 
+Firm area blank. 
+DESIGNED BY: The name of the lead architect or engineer who did the 
+design shall provide their information here. The format of the name 
+provided shall be first initial, followed by a period, then full last name 
+(e.g., J. Designer). 
+DRAWN BY: The name of the person who created the sheet shall provide 
+their information here. The format of the name provided shall be first 
+initial, followed by a period, then full last name (e.g., J. Drawer). 
+CHECKED BY: The name of the person who verified the data on the 
+sheet is consistent with the design intent shall provide their information 
+here. The format of the name provided shall be first initial, followed by a 
+period, then full last name (e.g., J. Checker). 
+SUBMITTED BY: The name of the Project Architect or Project Engineer 
+shall provide their information here. The format of the name provided 
+shall be first initial, followed by a period, then full last name (e.g., J. 
+Submitter). 
+SIZE: The nominal size of the sheet (e.g., ANSI D, ANSI F, ISO A1). 
+ISSUE DATE: This date shall be the month and year the project is going 
+to advertisement. The format of the date shall be MONTH YEAR (e.g., 
+OCTOBER 2014). 
+SOLICITATION NO.: This section shall be filled with the solicitation for 
+advertisement number.  
+CONTRACT NO.: This section shall be filled with the actual construction 
+contract award number.  
+ERDC/ITL SR-23-1 
+14 
+Note: SOLICITATION NO. and CONTRACT NO. may vary on multiple 
+factors (e.g., the project is design-build, design-bid-build, or other 
+contractual requirements). 
+Note: Two optional sections are available in the lower right of the 
+Management block. These sections could potentially be used to record the 
+total number of sheets in the construction document set, to record the 
+number of the sheet in the set, or to capture information such as the file 
+name, facility code, or drawing code. This data shall be defined by the 
+Issuing Agency. 
+2.1.10 Project Identification / Sheet Title Block 
+The Project Identification/Sheet Title block (Figure 2-9) is composed of 
+two sets of information: project identification and sheet information. The 
+organization of data in each half of the block reflects a philosophy of 
+moving from general information to specific. 
+Figure 2-9. Project Identification / Sheet Title block. 
+PROJECT IDENTIFICATION: The top half of this block contains 
+information about the project. All text within this part of the block shall be 
+3/32 in. high. The first line shall provide information about the project 
+location (e.g., FORT LEONARD WOOD, MISSOURI). The second line 
+shall provide a description of the project (e.g., DINING FACILITY). The 
+third line shall provide a project identifier (e.g., P2#, PN#, FY). If more 
+space is required for the description of the project, this description 
+information shall continue into the third line, and the project identifier 
+information shall be provided in the fourth line. 
+SHEET TITLE: The bottom half of this block contains a description of 
+the content of the sheet. All text within this part of the block shall be 1/8 
+in. high. The first line shall provide a description of what is presented on 
+ERDC/ITL SR-23-1 
+15 
+the sheet (e.g., REFLECTED CEILING PLAN, FLOOR PLAN). If more 
+than one type of information is presented on the sheet (e.g., plans, 
+schedules, details), the most important information is identified. The 
+second line shall provide what floor the information on the sheet is located 
+(e.g., FLOOR 2, BASEMENT). The third line shall provide specific 
+quadrant location information if required (e.g., ZONE 3, AREA B). 
+2.1.11 Sheet Identification Block 
+The Sheet Identification block (Figure 2-10) contains, at a minimum, the 
+"SHEET ID" title and the sheet identifier. The sheet identifier is composed 
+of the discipline designator, the sheet type designator, and the sheet 
+sequence number (e.g., A-101). The "SHEET ID" title shall be 1/8 in. high. 
+The height of the sheet identifier shall be 9/32 in. high. 
+Figure 2-10. Sheet Identification block. 
+Note: An optional BLDG ID field is available for those construction 
+projects where the sheet set contains more than one structure, feature, 
+volume, or option. If this field is used, identification for that particular 
+structure, feature, volume, or option is placed in this field. The height of 
+the BLDG ID field shall be 3/16 in. high. If this field is not used, leave this 
+space blank. 
+Note: “Sheet X of Y” has been removed from the Sheet Identification block 
+because the Index contains the sheet order information. Trying to keep 
+"Sheet X of Y" constantly updated becomes a huge burden on the design 
+team during project close out. When pages are added or removed, the 
+entire drawing set must be renumbered to modify the page count and 
+sheet numbers. Even on small projects (fewer than 100 sheets), the 
+renumbering process can take several hours to make the necessary 
+changes. Reprinting, reviewing, correcting, and potential reprinting of all 
+the sheets increases the burden of time and labor on the design team. On 
+ERDC/ITL SR-23-1 
+16 
+larger projects, this renumbering process potentially could take several 
+days. 
+2.1.12 Status 
+An additional field (Figure 2-11) is available on the Border Sheet for 
+specifying the current status of the project (e.g., 30%, 60%, 90%, 
+PRELIMINARY SUBMITTAL, FINAL SUBMITTAL, READY FOR 
+ADVERTISEMENT, AS AWARDED, AS-BUILT, RECORD DRAWING, 
+etc.). This information shall be located at the bottom-right corner of the 
+Border Sheet and shall be 3/16 in. high. 
+Figure 2-11. Status field. 
+Note: Status data are specific to each project or design organization. 
+Contact the organization for details on how this information is to be 
+presented. 
+2.2 Cover Sheet 
+Similar to the cover of a book, a Cover Sheet contains information provided 
+for both informational and promotional purposes. Like the rest of the 
+project set, the Cover Sheet information is contained within a Border Sheet 
+and is always given the Sheet Identifier of G-001. Information captured on 
+a Cover Sheet comprises mandatory textual information and areas 
+available for promotional/approval/contractual items (Figure 2-12). 
+ERDC/ITL SR-23-1 
+17 
+Figure 2-12. Cover sheet. 
+Note: Areas shown inside the dashed lines are intended for visual 
+reference in this section. The blue dashed lines and text are not intended 
+to be plotted. 
+2.2.1 Owner/Designer Information 
+Starting at the top left of the Cover Sheet and proceeding counterclockwise, 
+the first information that is captured on the Cover Sheet is information 
+about the owner and designer(s) (Figure 2-13). The Owner Communication 
+Mark shall be presented to the far left of this section. For USACE Districts, 
+this logo shall be the USACE Communication Mark with 1/4 in. high text 
+directly beneath, identifying the specific District. To the right of the Owner 
+logo, there is an area provided for designer logos. These logos could be 
+another District’s logo (using the same USACE Communication Mark, with 
+identifying District text) or an A-E’s logo. However, the Owner’s logo shall 
+always be the largest of the logos provided in this section of the Cover Sheet. 
+ERDC/ITL SR-23-1 
+18 
+Figure 2-13. Owner/Designer information. 
+2.2.2  Project/Contract Information (Part 1) 
+Directly below the Owner/Designer information section, there are four 
+lines of textual information identifying the project/contract (Figure 2-14). 
+The information captured in this section shall be the same information 
+that is shown in the top half of the Border Sheet’s Project Identification / 
+Sheet Title block. All text in this section shall be 1/2 in. high. 
+Figure 2-14. Link between Project/Contract information on Cover Sheet and Border Sheet. 
+2.2.3  Project Rendering / Small Location Map Area 
+Below the Project/Contract Information is a large area (Figure 2-15). This 
+space is available for providing a rendering of the project, showcasing the 
+intended final look. Another possible use for this space is for providing a 
+small vicinity map. 
+ERDC/ITL SR-23-1 
+19 
+Figure 2-15. Project rendering / small location map area (example rendering shown). 
+2.2.4  Project/Contract Information (Part 2) 
+The next section of the Cover Sheet is devoted to information about the 
+construction contract (Figure 2-16). Three of these text items shall be the 
+same as information already contained in the Border Sheet’s Management 
+block while the fourth is an optional field. All text in this section shall be 
+3/8 in. high. 
+Figure 2-16. Project/contract information (Part 2) area. 
+SOLICITATION NO.: This field shall be filled with the solicitation for 
+advertisement number. 
+CONTRACT NO.: This field shall be filled with the actual construction 
+contract award number. 
+Note: SOLICITATION NO. and CONTRACT NO. may vary on several 
+factors such as the project is design-build, design-bid-build, or other 
+contractual requirements. 
+ERDC/ITL SR-23-1 
+20 
+ISSUE DATE: This field is for the month and year that the project is 
+going to advertisement. The format of the date shall be MONTH YEAR 
+(e.g., OCTOBER 2014). 
+VOLUME: This field is optional and is available for those projects where 
+more than one volume of contract drawings is required. 
+2.2.5 Signature Block Area 
+The bottom right portion of the Cover Sheet is dedicated to any required 
+agency signature blocks (Figure 2-17). These could be signature blocks that 
+cover the entire drawing set, either showing approval and/or review of the 
+set by a District’s Chief of Engineering. Signature blocks and the 
+information contained within are defined by the host agency and vary 
+depending on project needs. 
+Figure 2-17. Signature block area (example signature block shown). 
+2.2.6 Small Project Index / A-E Stamps Area 
+The last area of the Cover Sheet, contained in the upper-right quadrant, is 
+available for either a small project’s index of drawings or A-E professional 
+stamps (Figure 2-18). The index is defined by the host agency and varies 
+depending on project needs. 
+ERDC/ITL SR-23-1 
+21 
+Figure 2-18. Small project index / A-E stamps area (example index shown). 
+2.3 Marking Controlled Unclassified Information (CUI) Construction 
+Drawings 
+Some Department of Defense projects may require the marking of 
+construction drawings as containing Controlled Unclassified Information 
+(CUI). This determination shall be the result of the Project Delivery Team 
+(PDT) going through the CUI process flowchart to decide if the project 
+meets the criteria (Figure 2-19). 
+ERDC/ITL SR-23-1 
+22 
+Figure 2-19. Process flowchart for CUI determination. 
+If the information is determined to fit the criteria from the flowchart, then 
+“CUI” shall be included at the top and bottom of each page in the 
+construction set of drawings. This text shall be Arial font at a height of 1/4" 
+(6 mm). On the Cover Sheet only, a CUI Designation Indicator shall also 
+be included (Figure 2-20). 
+ERDC/ITL SR-23-1 
+23 
+Figure 2-20. Cover sheet with CUI markings (locations may vary). 
+All text within the CUI Designation Indicator section shall be Arial and 
+1/8" high. Each line in it shall contain the following information: 
+CONTROLLED BY: Name of the DoD Component 
+CONTROLLED BY: Name of the office creating the document 
+CUI CATEGORY(IES): List category or categories of CUI contained in 
+the document 
+DISTRIBUTION STATEMENT: Applicable distribution statement or 
+limited dissemination control 
+POC: Name and phone number / email of point of contact (POC) 
+ERDC/ITL SR-23-1 
+24 
+3 Orientation 
+3.1 Common 
+3.1.1 Project Orientation Hierarchy 
+The project orientation shall be governed by the main feature of the 
+project. For instance, a levee repair with a roadway shall be oriented so 
+that the sheets follow the levee orientation (see Section 3.2.4). A roadway 
+repair on a levee shall be oriented so that the sheets follow roadway 
+orientation (see Section 3.2.5). 
+3.1.2 Views 
+Views shall be oriented on the sheet so that elevations and features are 
+aligned whenever possible. When detailing is being added, details shall 
+appear on the sheet based on their orientation on the feature. For instance, 
+the top view of a detail shall be oriented above the front view of the same 
+detail (Figure 3-1). If a detail is taken from a large-scale plan or elevation, 
+the orientation shall remain the same as the view from which the cut was 
+taken. If this is not possible, a note stating that the orientation was 
+changed shall be added (e.g., VIEW ROTATED 90 DEGREES). When two 
+or more plans are put on the same drawing, the orientation of all must 
+conform to one another and to their relative positions on the ground. 
+ERDC/ITL SR-23-1 
+25 
+Figure 3-1. Proper orientation of detail views. 
+3.1.3  Vicinity Maps 
+Vicinity maps shall be oriented with true north toward the top of the sheet. 
+ERDC/ITL SR-23-1 
+26 
+3.1.4 Plan Views 
+Plan views shall be oriented so that plan north is toward the top of the 
+sheet when practicable or toward the left when impracticable. 
+3.2 Horizontal 
+3.2.1 Project Coordinate System 
+The specified coordinate system/datum (usually State Plane) used for the 
+project shall be denoted at least once on civil plans. Coordinates shall be 
+identified using tick marks, which are oriented to show north, south, east, 
+and west. The grid system used shall be described in the general notes 
+(Figure 3-2). 
+Figure 3-2. Grid system described in general notes (example shown). 
+3.2.2 Channels and Waterways 
+Included under this heading are new channels and channel improvements 
+such as channel clearing and snagging, dredging, cleanout, enlargement, 
+and realignment (cutoffs). Detailed plans shall be oriented with the 
+alignment from top to bottom or from left to right, if practicable. The 
+direction of water flow for all waterways shall be indicated by arrowheads 
+ERDC/ITL SR-23-1 
+27 
+at the upper and lower limits of the sheet, pointing in the direction the 
+water flows (Figure 3-3). 
+Note: For coastal projects with tidal flows rather than river flows, all 
+channel sections are oriented looking inshore, which is usually also looking 
+toward increasing stations. Typically, labeling for port entry channels 
+begins offshore with negative stations and increases inshore with station 
+0+00 at the crossing of the shoreline into a landlocked channel. Stations 
+continue to increase inshore/upstream. However, it is recommended that 
+users research specific District requirements to follow proper District 
+procedure. 
+Channel cross sections shall be shown as if the observer were looking down
+stream. The words LEFT BANK and RIGHT BANK shall be shown in their 
+proper places at the top of the sections. 
+Note: River banks are always determined as being right bank or left bank 
+by facing in direction of water flow). 
+Where cross sections are plotted on a common centerline, the words LEFT 
+BANK and RIGHT BANK need to be shown once on the top section. 
+ERDC/ITL SR-23-1 
+28 
+Figure 3-3. Typical orientation of cross sections. 
+Some construction drawings of flood control projects will require the 
+section to be shown looking upstream. For instance, some downstream 
+elevations will be unique and will need to be drawn in various projections. 
+3.2.3 Locks and Dams 
+General plans, elevations, and longitudinal sections of locks, dams, and 
+similar structures shall be oriented with the direction of water flow from 
+bottom to top or from left to right, if practicable. Plans and profiles of 
+floodgates shall be oriented with the observer looking downstream. Cross 
+sections of locks shall be shown as if the observer were looking 
+downstream, except in special cases where an upstream view would better 
+clarify a complex positioning of adjoining elements. Typical dam sections 
+shall be shown with the upstream side on the left and the downstream side 
+on the right. The words UPSTREAM and DOWNSTREAM shall be shown 
+in their proper places at the top of the sections (see Figure 3-3). 
+ERDC/ITL SR-23-1 
+29 
+3.2.4 Levees 
+Detailed plans of levees, dikes, berms, and slide repairs shall be oriented 
+with the stream side (unprotected side) at the top of the sheet, irrespective 
+of stream flow. All levee cross sections shall be plotted looking in the 
+direction in which the stations increase. The words LANDSIDE and 
+WATERSIDE shall be shown in their proper places at the top of all plotted 
+sections. Where cross sections are plotted on a common Centerline, the 
+words LANDSIDE and WATERSIDE must be shown once on the top 
+section (see Figure 3-3). 
+Note: Because of channel orientation and irregular shapes of levee 
+dredge material placement areas, plans are sometimes oriented  
+1. to match channel orientation (stationing increasing right to left), 
+allowing the channel to be shown either above or below the placement 
+area 
+2. to fit the irregular shape to the plan sheet trying to best maintain the 
+north up/left orientation. 
+3.2.5 Roadways 
+Roadways shall be oriented so that stationing runs either left to right or 
+bottom to top of the drawing. For short roads and entrances (i.e., driveway 
+to parking lot), start stationing at the Centerline of the most major road 
+(always confirm with state publications/requirements). Cross sections 
+shall be shown as if the observer were looking up station (Figure 3-4). 
+Figure 3-4. Orientation of roadways. 
+ERDC/ITL SR-23-1 
+30 
+3.3 Vertical 
+3.3.1 Column Grid System 
+A grid system is used to indicate structural columns, load-bearing walls, 
+shear walls, and other structural elements on the drawings. It is used 
+primarily for reference in schedules of structural data. A grid system is 
+also used if the design of a building is based on a module system, 
+regardless of the structural system. Grid lines are used as a basis for 
+dimensioning. Proper planning and layout of a drawing on the selected 
+sheet size requires the accommodation of alphanumeric grid designations 
+within column indicators. Vertical grid lines shall have designators at the 
+top of the grid numbered from left to right. Horizontal grid lines shall have 
+designators at the right side of the grid alphabetized from bottom to top. 
+To eliminate confusion with the numerals 0 (zero) and 1 (one), do not use 
+letters O or I (UDS Module 4—Drafting Conventions [CSI 2014]). 
+Where additional intermediate structural support elements occur between 
+grid lines, a [decimal] designation is used. For example, a column 
+occurring at the midpoint between grid lines 2 and 3 would be designated 
+2.5. In a similar manner, columns occurring between grid lines A and B 
+would be represented as A.1, A.2, A.3, and A.4 (Uniform Drawing System 
+Module 4—Drafting Conventions [CSI 2014]). 
+3.3.2 Numbering of Floors 
+The ground floor shall be designated as the first floor (e.g., FLOOR 1, FIRST 
+FLOOR, F1, etc.). All occupied floors above the first floor are to be 
+numbered sequentially upward. The floor below the first floor is considered 
+to be the first basement (e.g., BASEMENT 1, B1, etc.). Subsequent floors 
+below the first basement are numbered sequentially. The topmost floor of 
+the building that does not contain office or habitable space is designated as 
+the attic (typically this area contains structural framing and HVAC 
+equipment/ducts). The area above the topmost floor is designated as the 
+roof (ROOF, or ROOF1 [R1], ROOF2 [R2], etc. if you have roofs at different 
+elevations). 
+3.3.3 Numbering of Rooms 
+All floor plans (except structural) shall show room identifiers (Figure 3-5). 
+The first part of a room identifier shall match the floor number. Typically, 
+room numbering starts at the most prominent means of access (e.g., main 
+ERDC/ITL SR-23-1 
+31 
+entrance, elevator, or stair) to the floor and proceeds sequentially. For 
+instance, if the building is a single-story structure, then the first room to the 
+right of the main entrance would be 101. If the main entrance opens into a 
+lobby or vestibule, then the lobby would be numbered 100, and numbering 
+would continue sequentially with the first room to the right (Figure 3-6). 
+Figure 3-5. Room identifier symbol. 
+Note: Room numbers on construction documents are typically for 
+construction references and do not necessarily reflect the final room 
+numbers. See the Signage schedule for final room number/names. It is 
+recommended that the architect consult the building owner before 
+beginning room numbering. 
+Figure 3-6. Room numbering example. 
+ERDC/ITL SR-23-1 
+32 
+3.3.4  Numbering of Doors 
+Each door opening in a building shall have a door mark symbol composed 
+of a 3/32 in. (2.4 mm) text unique identifier inside of an elongated circle 
+3/8 in. (10 mm) wide × 3/16 in. (5 mm) high (Figure 3-7). For rooms that 
+have one door opening, the door opening number shall be the same as the 
+secure side room number. If more than one door opening in a room exists, 
+door openings within that room shall be identified by the room number 
+followed by an alphabetical character starting clockwise from the corridor 
+access door opening. For example, for Room 126 (Figure 3-8), the corridor 
+access door opening would be numbered 126A, and the second door 
+opening within Room 126 would be numbered 126B. The door identifier 
+shall also be placed in the Mark column of Door Schedules that are 
+developed. 
+Figure 3-7. Door mark symbol. 
+Figure 3-8. Numbering of doors. 
+ERDC/ITL SR-23-1 
+33 
+3.3.5  Identification of Windows 
+Each window in a building shall have a window identifier symbol 
+composed of a 3/32 in. (2.4 mm) text unique identifier inside of a 
+diamond (Figure 3-9). The window identifier number and letter shall also 
+be placed in the Mark column of Window Schedules that are developed. 
+Figure 3-9. Window identifier symbol. 
+3.3.6  Numbering of Stairs  
+The most prominent stair with the largest egress capacity shall be identified 
+with 3/32 in. (2.4 mm) high text as STAIR 1. On the first floor, number the 
+stairs sequentially, moving clockwise from the first stair. The stair number 
+remains the same for its entire height. Stairs above or below the first floor 
+that do not connect with the first floor are numbered following those that 
+do. If several prominent stairs with large egress capacity exist, the stairs 
+may be numbered in order of their importance to the main egress point in 
+the building. Additional stairs may be numbered as described. 
+3.3.7 Numbering of Elevators  
+The elevator nearest to the building entrance with the largest access and 
+egress capacity shall be identified with 3/32 in. (2.4 mm) high text as 
+ELEVATOR 1. Number additional elevators moving clockwise within 
+elevator banks. Use the same sequence and arrangement of numbers on 
+additional banks of elevators if present. 
+3.3.8 Labeling of Duct 
+The SMACNA labels rectangular duct as shown in Figure 3-10a (SMACNA 
+2001). The first value represents the side of the duct shown (width), and 
+the second value represents the side of the duct not shown (depth). Round 
+duct is shown as the diameter of the duct, followed by a diameter symbol 
+(Figure 3-10b). 
+ERDC/ITL SR-23-1 
+34 
+Figure 3-10. Duct labeling. 
+ERDC/ITL SR-23-1 
+35 
+4 Drawing Symbology 
+4.1 Corps Castle 
+The appearance of the USACE Communication Mark (commonly known as 
+the Corps Castle) has very specific requirements (Figure 4-1). Customized 
+versions of the Communication Mark for individual USACE organizations 
+are prohibited unless the purpose is for “employee morale welfare 
+activities.” The Communication Mark is trademarked, and the ® symbol is 
+to be included “when reproducing printed promotional material that is 
+intended for public usage.” 
+Figure 4-1. US Army Corps of Engineers Communication 
+Mark (commonly known as the Corps Castle). 
+The “US Army Corps of Engineers®” text located underneath the 
+Communication Mark shall be aligned with its left edge. If a Field Operating 
+Activity (FOA) signature is added to the Communication Mark (Figure 4-2), 
+the text shall always be placed below the “US Army Corps of Engineers®” 
+text. For more information on the USACE Communication Mark, go to 
+http://www.publications.usace.army.mil/Portals/76/Publications/EngineerPamphlets/EP_310-1-6.pdf. 
+Figure 4-2. Placement of Field Operating Activity (FOA) signature in USACE 
+Communication Mark. 
+ERDC/ITL SR-23-1 
+36 
+4.2 Symbols 
+4.2.1  Symbol Descriptions 
+Symbol descriptions, located anywhere in a drawing set, shall adhere to 
+the following basic guidelines to allow their repetition from job to job, 
+preclude conflicts within the drawings, and maximize suitability for CAD 
+interface: 
+• Symbol descriptions in legends shall be concise and worded in a 
+comma-separated structure that flows from the general to the specific. 
+For example, in lieu of wording the description of a convenience 
+receptacle as WALL-MOUNTED, DUPLEX RECEPTACLE, structure 
+the wording as RECEPTACLE, DUPLEX, WALL-MOUNTED. 
+• The symbol description shall not contain specific information that 
+would normally be contained in equipment schedules or on the plans. 
+• Where equipment or devices within a room are all identical, one 
+symbol shall be identified with the full type identifier, and other 
+information and a callout shall be referenced to this symbol with the 
+following words: TYPICAL FOR THIS ROOM. TYPICAL (abbreviated 
+“TYP”), when used by itself, applies to everywhere a symbol is used in a 
+drawing set unless otherwise noted. 
+4.2.2 Symbol Identifiers 
+Identifying letters within and around symbols must be legible at half 
+normal size. Therefore, letter sizes for symbols shall be a minimum of 
+3/32 in. (2.4 mm) for that symbol. 
+4.2.3 Drawing Block Title 
+4.2.3.1 Drawing Block Title Identification and Placement 
+The Drawing block title is composed of multiple pieces. The identification is 
+a bubble with a combination row letter then column number identification 
+(Figure 4-3). The alphabetic/numeric identification is based on where the 
+drawing block is placed on the sheet grid in the drawing area (see Section 
+2.1.5). For instance, if the lower left corner of a drawing block is located at 
+the intersection of sheet grid row B and sheet grid column 3, then the 
+identification becomes B3. That identification is also used in the top-half of 
+the detail/section/elevation indicator symbols. 
+ERDC/ITL SR-23-1 
+37 
+Figure 4-3. Drawing block title identification symbol. 
+The decision on where to place the drawing block title within the drawing 
+area of the sheet shall be based on priority and convenience:  
+[When placing details, sections, or elevations,] locate 
+the most frequently used referenced drawing block at 
+the lowest drawing module adjacent to the title or 
+notation block [bottom right portion of the drawing 
+area]. Add additional drawings in order of priority, 
+from bottom to top and from right to left. Starting the 
+drawings from the right to the left makes it easier to 
+use partially filled sheets. This eliminates the need to 
+open a heavy set of drawings all the way to the 
+binding to refer to a few details drawn on the left
+hand side of the sheets. (UDS Module 4—Drafting 
+Conventions [CSI 2014]). 
+Note: When only one subject appears on a drawing, and its title already 
+appears in the title block, a drawing block title shall also be placed under 
+the entire area of the subject. 
+Note: For consistency and uniformity, multiple details with differing 
+subject matters and subtitles are no longer allowed in the same drawing 
+area. Details are to be a single subject matter. Additional information 
+can be added as a note. 
+4.2.3.2 Drawing Block Title Text 
+All text placed in the drawing block title shall be Arial. The height of the 
+text within the bubble and on the drawing area title line shall be 3/16 in. 
+The scale text underneath the drawing block title line shall be 3/32 in. 
+ERDC/ITL SR-23-1 
+38 
+4.2.3.3 Scales 
+Drawing block titles shall have the text scale placed below the left side of 
+the drawing block title line. To ensure that reduced or enlarged prints are 
+plotted to scale, at least one graphic scale shall be placed in the drawing 
+for each different scale used on the sheet. The graphic scale is placed in the 
+lower right corner of the drawing block below the drawing block title line 
+of the respectively scaled item (see Figure 4-3). 
+When there is an exaggeration in scales associated with a view (e.g., 
+profiles and cross sections), then all scales shall be provided below the 
+drawing block title line (Figure 4-4). For instance, in Figure 4-4’s first 
+example, no graphic scale is required when a profile or cross section has a 
+scaled grid, otherwise a graphic scale shall be placed similarly to the 
+requirements stated above. 
+Figure 4-4. Exaggerated scale examples. 
+When a drawing is not drawn to any particular scale, the words “SCALE: 
+NTS” shall be so stated, where NTS indicates Not to Scale (Figure 4-5). 
+Figure 4-5. Not to scale example. 
+ERDC/ITL SR-23-1 
+39 
+4.2.3.4 North Arrow 
+The plan north arrow defines the orientation of the sheet and shall be 
+oriented so that it points to the top or the left of the drawing block. The 
+true north arrow (shown dashed in the symbol), as defined by the project 
+(e.g., grid north, magnetic north, etc.), is adjusted to show the rotation of 
+the site in relation to the drawing block. The north arrow (Figure 4-6) shall 
+be placed in the lower right-hand corner of the drawing block above the 
+drawing block title. If possible, the orientation of the true north arrow 
+shall be maintained throughout an entire drawing set. 
+Figure 4-6. North arrow. 
+4.2.3.5 Back-referencing 
+Back-referencing occurs when the drawing block title references back to 
+the original sheet and location where a detail/section/elevation is called 
+out. The practice of back-referencing is not addressed by the NCS. While 
+not against the A/E/C Standards, back-referencing requires an inordinate 
+amount of coordination to make sure all information is kept up-to-date 
+and thus is not required. 
+ERDC/ITL SR-23-1 
+40 
+To provide a standard means to accomplish back-referencing that does not 
+conflict with the NCS convention (Figure 4-7), a simple method was 
+developed. The method places the back-reference to the left of the drawing 
+block title bubble and has two parts. The upper half shows the grid 
+location of the original drawing block identification. The lower half shows 
+the first sheet number that the indicator symbol shows up on. 
+Figure 4-7. Back-referencing method using the drawing block title. 
+4.2.4 Elevations, Sections, and Details 
+4.2.4.1 Elevation/Section/Detail Indicator Symbol 
+The symbology for elevation, section, and detail callouts may be different, 
+but the procedure for identifying and naming them is the same. The 
+elevation, section, or detail is called out in a drawing with a two-part 
+symbol that identifies the following: 
+• The elevation/section/detail identification 
+• The sheet on which the elevation/section/detail is located 
+4.2.4.2 Elevation Indicator Symbol 
+The elevation indicator symbol (or callout) is a symbol that indicates an 
+area of the drawing that is shown as an elevation on the elevations sheet 
+(Figure 4-8). As mentioned previously, the top part of the circle is filled in 
+with the elevation identification, and the bottom part is filled in with the 
+sheet number on which the elevation occurs. The sheet number shall 
+always be an XX2NN designation where XX is the Discipline Designator, 2 
+indicates it is an Elevations sheet, and NN is the Sheet Sequence Number 
+(01–99). 
+ERDC/ITL SR-23-1 
+41 
+Figure 4-8. Elevation indicator symbol. 
+4.2.4.3 Section Indicator Symbol 
+The section indicator symbol (or callout) is a symbol that cuts through an 
+area of the drawing that is shown as a section cut on the sections sheet 
+(Figure 4-9). As mentioned previously, the top part of the circle is filled in 
+with the section identification, and the bottom part is filled in with the 
+sheet number on which the section occurs. The sheet number shall always 
+be an XX3NN designation, where XX is the Discipline Designator, 3 
+indicates it is a Sections sheet, and NN is the Sheet Sequence Number 
+(01–99). 
+Figure 4-9. Section indicator symbol. 
+ERDC/ITL SR-23-1 
+42 
+4.2.4.4 Detail Indicator Symbol 
+The detail indicator symbol (or callout) is a circle that points to an area of 
+the drawing that is shown as a detail on the details sheet (Figure 4-10). As 
+described previously, the top part of the circle is filled in with the detail 
+identification, and the bottom part is filled in with the sheet number on 
+which the detail occurs. The sheet number shall always be an XX5NN 
+designation where XX is the Discipline Designator, 5 indicates that it is a 
+Details sheet, and NN is the Sheet Sequence Number (01–99). 
+Note: For enlarged areas, the detail indicator symbol is used in a similar 
+fashion as described above. The difference is that the sheet number shall 
+always be an XX4NN designation where XX is the Discipline Designator, 
+4 indicates that it is an Enlarged Area sheet, and NN is the Sheet 
+Sequence Number. 
+Figure 4-10. Detail indicator symbol. 
+4.2.4.5 Callouts Using Building IDs 
+Sometimes a project has multiple buildings within the same plan set. 
+When calling out an elevation/section/detail, place the building ID 
+opposite the arrow or leader (Figure 4-11). 
+Figure 4-11. Building ID placement. 
+ERDC/ITL SR-23-1 
+43 
+4.2.5 Welding Symbols 
+When typical weld symbols are developed, the following drafting 
+convention shall be followed (Figures 4-12 and 4-13, Table 4-1). 
+The numbers in Figure 4-12 are keyed to the following list: 
+Finishing symbol 
+Contour symbol 
+Groove angle: includes angle of countersink for plug welds 
+Root opening: depth of filling for plug and slot welds 
+Groove weld size 
+Depth of bevel: size or strength for certain welds 
+Specification, process, or other references 
+Tail (may be omitted when reference not used) 
+Length of weld segment 
+Pitch (center-to-center spacing) of weld segments 
+Field weld symbol (flag always points to tail of weld symbol) 
+Arrow connecting reference line to arrow side member of joint or arrow 
+side of joint 
+Reference line 
+Basic weld symbol or detail reference 
+Number of spot, seam, stud, plug, slot, or projection welds 
+Weld-all-around symbol 
+Figure 4-12. Typical welding symbols. 
+ERDC/ITL SR-23-1 
+44 
+Figure 4-13. Weld symbols. 
+ERDC/ITL SR-23-1 
+45 
+Table 4-1. Common welding processes. 
+Process 
+Electrogas arc welding  
+Abbreviation 
+Flux cored arc welding 
+EGW 
+Gas metal arc welding 
+FCAW 
+Gas tungsten arc welding 
+GMAW 
+Plasma arc welding 
+GTAW 
+Submerged arc welding 
+PAW 
+Shielded metal arc welding 
+SAW 
+Flash welding 
+SMAW 
+Resistance welding 
+FW 
+Oxyfuel gas welding 
+RW 
+Diffusion welding (solid state) 
+OFW 
+Friction welding (solid state) 
+DFW 
+Dip brazing 
+FRW 
+Diffusion brazing 
+DB 
+Furnace brazing 
+DFB 
+Induction brazing 
+FB 
+Infrared brazing 
+IB 
+Resistance brazing 
+IRB 
+Torch brazing 
+RB 
+Electron beam welding 
+TB 
+Electroslag welding 
+EBW 
+Laser beam welding 
+ESW 
+LBW 
+4.3 Linework 
+Various types of lines require specific line weights. Some of those line 
+types and associated line weights are shown in Figure 4-14 (see the Symbol 
+Guide for additional line types). 
+ERDC/ITL SR-23-1 
+46 
+Figure 4-14. Types of lines and associated line weights. 
+Centerlines: Centerlines (“014200-914 Centerline” in the A/E/C CAD 
+Standard) are used to indicate the travel of a center. Centerlines shall 
+cross without voids. Short centerlines may be unbroken if there is no 
+confusion with other lines. 
+Dimension Lines: Dimension lines are used to show a linear 
+measurement indicated on a drawing. Dimensions show the extent and 
+significance of the object. 
+Leaders: Leaders are used to indicate a part or portion to which a 
+number, note, or other reference applies. 
+Break Lines: Break lines are used to indicate that only a portion of a 
+drawing or a partial view is being shown. 
+Phantom Lines: Phantom lines (“014200-915 Phantom Line” in the 
+A/E/C CAD Standard) are used to indicate the alternate position of parts, 
+repeated detail, or the relative position of an absent part. 
+ERDC/ITL SR-23-1 
+47 
+Hidden Lines: Hidden lines (“014200-913 Hidden Line” in the A/E/C 
+CAD Standard) are used to show the hidden features of a part or object. 
+Relevance for clarity must be considered. Crossing and stacked hidden 
+lines shall be avoided. 
+Existing Features: Existing feature lines are used for all lines on the 
+drawing representing objects or structures that already exist and will 
+impact the design. Existing feature lines are typically shown screened. 
+Primary Features: Primary features represent all new work in the 
+design documents. 
+Edge of Interior/Exterior Elevations: The edges of interior/exterior 
+elevations are the outlines around the perimeter of an elevation. 
+Section Cutting Plane Lines: Cutting plane lines are used to indicate a 
+plane or planes in which a section is taken. 
+Borders: Border lines are used to create a margin on the drawing sheet. 
+Footprints: Footprints show the outline of a building or other object 
+within the drawing. 
+Match Lines: Match lines (use “014200-914 Centerline” in the A/E/C 
+CAD Standard) are used to show where part of a drawing that is too large 
+to be contained on one sheet matches the continuation of that drawing on 
+another sheet. 
+4.3.1 Showing New Work vs. Demolition Work 
+For clarity in as-built drawings, plan views of demolition work shall not be 
+combined with those for new work. Demolition plans shall show features to 
+be removed that have contractual significance to the work in the 
+construction contract. Notes shall state which items shown on the 
+demolition plans will be removed unless noted or specified. Notes, key 
+notes, symbol modifiers, patterns, line styles, or callouts shall be used to 
+delineate items to be removed or relocated. 
+ERDC/ITL SR-23-1 
+48 
+4.3.2 Showing New Work vs. Existing Conditions 
+New work shall be easily distinguishable from other information shown on 
+the drawings. Show new work at 100% (unscreened), and show existing 
+conditions, including text, screened at a percentage between 20% and 
+60%. This screening is performed so that the new work will stand out from 
+the existing conditions. 
+Survey drawings shall be shown at 100% (unscreened) to be screened later 
+if incorporated into design drawings. 
+ERDC/ITL SR-23-1 
+49 
+5 Drawing Annotation 
+5.1 Text 
+5.1.1 Font 
+Contrasting text fonts are used within a drawing to delineate types of 
+information. In most A/E/C drawings, the fonts shown in Table 5-1 and 
+described below should be sufficient. 
+• Regular font: This font is appropriate for most general notes, labels, 
+dimensions, or title blocks. 
+• Italic font: An italic font is used where text needs to be easily distin
+guished from other text. 
+• Filled font: Filled fonts are used primarily for titles and on cover 
+sheets. 
+• Symbol font: This font shall be used in cases where Greek symbols are 
+representations for technical information. 
+Table 5-1. Comparison of font types. 
+Font Type 
+Regular 
+True Type 
+Arial 
+Italic 
+Arial (Italic) 
+Filled 
+Arial (Bold) 
+Symbol 
+Arial (Symbols) 
+ERDC/ITL SR-23-1 
+50 
+5.1.2 Text Height 
+The minimum text height for dimensions, notes, callouts, table/schedule 
+text, and general text in plotted files is 3/32 in. (2.4 mm). Title and 
+subtitles shall be plotted equivalent to 3/16 in. (5 mm) and 1/8 in. (3 mm) 
+lettering size, respectively. The text height and text width shall be assigned 
+equal number values. Line spacing shall be equal to one-half of the text 
+height. 
+To avoid confusion of the word minimum, Table 5-2 shows the allowable 
+text height variations from paragraph above for all architectural or vertical 
+disciplines (Hazardous Materials, Structural, Architectural, Interiors, Fire 
+Protection, Plumbing, Mechanical, Electrical, Telecommunications, 
+Resource, Other Disciplines, and Operations). Table 5-3 shows the 
+allowable text height variations for civil or horizontal disciplines (General, 
+Survey/Mapping, Civil, Geotechnical, and Landscape). Text heights for 
+symbols, line styles, and text within the border shall follow the heights 
+listed in Table 5-3, regardless of the discipline. 
+Units 
+Actual 
+Table 5-2. Vertical discipline: allowable text heights. 
+International Feet 
+(Architectural) 
+Survey Feet 
+(Architectural) 
+Normal 
+text height 
+0.09375" 
+Actual (metric) 
+Architectural 
+(metric) 
+3/32" 
+Subtitle 
+height 
+0.125" 
+N/A 2.38125 mm 
+2.4 mm 
+1/8" 
+Title text 
+height 
+0.1875" 
+N/A 
+3.175 mm 
+3 mm 
+3/16" 
+Units 
+Actual 
+N/A 
+4.7625 mm 
+Table 5-3. Horizontal discipline: allowable text heights. 
+International 
+Feet (Civil) 
+5 mm 
+Survey 
+Feet (Civil) 
+Normal text height 
+0.125" 
+0.125" 
+0.125 si 
+Actual (metric) 
+Civil (metric) 
+Subtitle height 
+3.175 mm 
+0.125" 
+0.125" 
+0.125 si 
+3 mm 
+Title text height 
+3.175 mm 
+0.1875" 
+0.1875" 
+3 mm 
+0.1875 si 
+4.7625 mm 
+5 mm 
+Table 5-4 lists recommended text heights for common inch-pound scales, 
+as well as line-type scale factors for those scales. Table 5-5 lists 
+recommended text heights for common metric scales. 
+Note: The scales shown are not all inclusive. Scales used shall be limited 
+to those commonly found on hand-held architectural, mechanical, and 
+ERDC/ITL SR-23-1 51 
+engineering scales. Common scale factors are provided in the A/E/C 
+Workspace through annotation scale. Tables 5-4 and 5-5 are provided as 
+a reference for AutoCAD and legacy drawings. 
+Table 5-4. Inch-pound text heights and line type scales. 
+Scale Text Height Line Type Scale 
+12" = 1'0" or full size 3/32" 1 
+6" = 1’0" 3/16" 2 
+3" = 1'0" 3/8" 4 
+1-1/2" = 1'0" 3/4" 8 
+1" = 1'0" 1.125" 12 
+3/4" = 1'0" 1.5" 16 
+1/2" = 1'0" 2.25" 24 
+3/8" = 1'0" 3" 32 
+1/4" = 1'0" 4.5" 48 
+3/16" = 1'0" 6" 64 
+1/8" = 1'0" 9" 96 
+3/32" = 1'0" 12" 128 
+1/16" = 1'0" 18" 192 
+1/32" = 1'0" 36" 384 
+1" = 5' 5.625" 60 
+1" = 10' 11.25" 120 
+1" = 20' 1.875' 240 
+1" = 30' 2.8125' 360 
+1" = 40' 3.75' 480 
+1" = 50' 4.6875' 600 
+1" = 60' 5.625' 720 
+1" = 100' 9.375' 1,200 
+1" = 200' 18.75' 2,400 
+1" = 400' 37.5' 4,800 
+1" = 500' 46.875’ 6,000 
+1" = 1,000' 93.75' 12,000 
+1" = 2,000' 187.5' 24,000 
+  
+ERDC/ITL SR-23-1 52 
+Table 5-5. Metric text heights and line type scales. 
+Scale Text Height Line Type Scale 
+1:1 or full size 2.4 mm 1 
+1:2.5 6 mm 2.5 
+1:5 12 mm 5 
+1:10 24 mm 10 
+1:20 48 mm 20 
+1:30 72 mm 30 
+1:40 96 mm 40 
+1:50 120 mm 50 
+1:60 144 mm 60 
+1:100 240 mm 100 
+1:200 480 mm 200 
+1:400 960 mm 400 
+1:500 1.2 m 500 
+1:600 1.44 m 600 
+1:700 1.68 m 700 
+1:1000 2.4 m 1,000 
+1:2000 4.8 m 2,000 
+1:5000 12 m 5,000 
+1:6000 14.4 m 6,000 
+1:10000 24 m 10,000 
+1:20000 48 m 20,000 
+5.1.3 Orientation and Placement 
+Text shall be set parallel to the primary base of the drawing. If necessary, 
+text can be rotated at 30-degree angles up to 180 degrees as long as the 
+orientation is as shown in Figure 5-1. However, rotating the text is 
+discouraged to prevent having to turn the drawing sheet to read notations. 
+Note: An exception to maintaining this text orientation would be on 
+waterways projects because of the various directions in which channels 
+are located. Often text that has a definite bearing on the contract is kept 
+at proper orientation while map features incidental to the contract are 
+allowed to follow the orientation when created in a north-up base map, 
+which may result in upside-down text on rotated plan sheets. 
+ERDC/ITL SR-23-1 
+53 
+Figure 5-1. Orientation of text. 
+Text shall never be placed over other text. Text shall not be placed over 
+feature lines, hatching, or patterning. If text is required in a hatched or 
+patterned area, the hatching/patterning shall be clipped (masked) so the 
+text can be clearly read. The same criteria apply to background imagery. 
+Text justification depends upon the type of text being placed. For example, 
+general numbered notes shall have upper-left justification, elevation labels 
+appearing to the left of a feature shall have bottom-right justification, and 
+elevation labels appearing to the right of a feature shall have bottom-left 
+justification. 
+Note: Use proper planning for text justification so future editing does 
+not require the text to be moved. Use multiline text (node) versus single
+line text wherever multiple lines of text are placed. 
+5.1.4 Capitalization 
+Capital letters shall be used in text (Figure 5-2). Capital letters retain 
+improved readability when reproduced at half-size. 
+Figure 5-2. Capitalization in text. 
+ERDC/ITL SR-23-1 
+54 
+5.1.5 Leader Terminators 
+Arrowheads, dots, and tildes are examples of typical terminators used with 
+text leaders (Figure 5-3). See Table 5-6 for terminator sizing.   
+Figure 5-3. Terminator examples. 
+Table 5-6. Terminator sizing. 
+Terminator 
+Size 
+Arrowhead 
+Dot 
+W = 1.5 × Text height (TH) 
+Dia = 0.75 × TH 
+Tilde 
+TH 
+5.2 Note Block 
+Per the NCS: 
+The note block is the module or modules within the 
+drawing area where keynotes, general notes, and key 
+plans are located. Not all sheets will have a note block. 
+The note block is located in the far-right column(s) of 
+the drawing area. (Figure 5-4) 
+When note blocks expand beyond a single column, additional columns 
+shall be added directly to the left of the far right note block column, and 
+the hierarchy shall be maintained from top to bottom and left to right 
+(Figures 5-5 and 5-6). 
+ERDC/ITL SR-23-1 
+55 
+Figure 5-4. Location of note block area. 
+Figure 5-5. Full sheet of notes examples. 
+ERDC/ITL SR-23-1 
+56 
+Figure 5-6. Full sheet of notes examples. 
+The hierarchy of categories within the note block shall be General Notes, 
+General Discipline Notes, General Sheet Notes, Sheet Keynotes, 
+Abbreviations, Legend, and Key Plan. The hierarchy of categories and 
+numbered notes shall be maintained from left to right (see Figures 5-7 and 
+5-8). All categories may not be used. The note block area shall be a 
+minimum of 4 modules wide by 1 module high. All notes located within the 
+note block area shall be clear and concise. 
+ERDC/ITL SR-23-1 
+57 
+Figure 5-7. Hierarchy of categories. 
+ERDC/ITL SR-23-1 
+58 
+Figure 5-8. Hierarchy of numbered notes. 
+5.2.1 General Notes 
+General notes shall have the note block category titled GENERAL NOTES. 
+General notes are notes with universal application to contract work on all 
+drawings. General notes shall be worded such that they are independent of 
+the drawing(s), without cross-referencing or pointing with leaders to 
+plans, details, and so on. General notes shall be capable of being removed 
+from the drawings and placed in the specifications. 
+All notes under the GENERAL NOTES heading shall be numbered 
+sequentially starting with 1. General notes shall not include contractual 
+requirements, such as statements of costs, time and place of delivery, 
+methods of payment, and requirements for submission, approval, or 
+distribution of data or reports. 
+5.2.2 General Discipline Notes 
+General notes applicable to a particular discipline (e.g., architectural, 
+electrical, mechanical) shall be located on the first sheet for that discipline 
+and the note block category shall be titled GENERAL (Insert Discipline) 
+NOTES (Figure 5-9). If using Level 2 Discipline Designators (e.g., MH for 
+Mechanical HVAC, MP for Mechanical Piping, etc.), each type of 
+designator could potentially have its own general discipline notes 
+(typically found on the first sheet of that designator) (Figure 5-10). 
+ERDC/ITL SR-23-1 
+59 
+Figure 5-9. General discipline notes. 
+Figure 5-10. General discipline notes (if using Level 2 discipline designators). 
+5.2.3 General Sheet Notes 
+General notes applicable to an individual sheet or a range of sheets shall 
+have the note block category titled GENERAL SHEET NOTES or 
+GENERAL SHEET NOTES:  ____ THRU ____ (Figures 5-11 and 5-12). 
+ERDC/ITL SR-23-1 
+60 
+Figure 5-11. General sheet notes (individual sheet). 
+Figure 5-12. General sheet notes (range of sheets). 
+5.2.4 Sheet Keynotes 
+Keynotes used in the drawing set shall be defined in a note block category 
+titled SHEET KEYNOTES. Keynotes are useful when there is a lot of text to 
+be placed that may clutter or confuse the intent of the drawing. Per the 
+NCS: 
+(Keynotes) Identify, inform, and instruct without 
+reference to the specifications. They are drawn with a 
+hexagonal symbol containing a numeral with (or 
+without a) leader(s) from the hexagon to the identified 
+item (see Figure 5-13). … The numeral for each 
+symbol that appears on the sheet is listed in the 
+sheet’s note block along with a text note that describes 
+the graphic. A unique numeral must be assigned for 
+ERDC/ITL SR-23-1 
+61 
+each identified item, and the keynotes tabulated 
+sequentially within the note block (see Figure 5-14). 
+Figure 5-13. Keynote symbol (with and without leader). 
+Figure 5-14. Sheet keynotes (note block). 
+5.2.5 Abbreviations 
+Abbreviations used in the drawing set shall be defined in a note block 
+category titled ABBREVIATIONS (see Figure 5-7). There could be an 
+abbreviations sheet covering the entire project set (located within the 
+General discipline set of sheets) and/or an abbreviation category specific 
+to disciplines (located at the beginning of a discipline’s set of sheets). 
+Abbreviations for words or phrases frequently used in plans, sections, 
+elevations, or details shall follow the abbreviations as established in the 
+NCS UDS Module 5—Terms and Abbreviations. In addition to this 
+requirement, the following rules regarding abbreviations shall be followed: 
+• The use of abbreviations shall be kept to a minimum and only when 
+their meanings are unquestionably clear. When in doubt, spell it out. 
+• Once an abbreviation has been used, the same abbreviation must be 
+continued throughout the project document. Only one abbreviation is 
+allowed for each nomenclature. 
+• Other abbreviations, particularly discipline-unique abbreviations, may 
+be used but must not conflict with those established in the NCS. 
+• Any abbreviation used shall be identified in the abbreviations list of the 
+drawing set. 
+• The rules of grammar concerning capitalization shall be followed. 
+Upper case letters shall be used in all abbreviations except where the 
+ERDC/ITL SR-23-1 
+62 
+use of lower case has been established by the NCS or by long practice 
+(e.g., Hz for Hertz). 
+• Periods shall be omitted (e.g, “TYP” instead of “TYP.”) 
+• Spell out all titles and subtitles. 
+• The ampersand (&) may be used in firm names (e.g., Jones & Co., 
+Mobile & Ohio R.R.) or in abbreviations of commonly joined words 
+(e.g., T&G for tongue and groove, C&G for curb and gutter) but never 
+to take the place of and in sentences, notations, or titles. 
+5.2.6 Legend 
+Symbols used in the drawing set shall be defined in a note block category 
+titled PROJECT LEGEND, (DISCIPLINE) LEGEND, or SHEET LEGEND 
+(see Figure 5-7). There could be a legend sheet covering the entire project 
+set (typically located within the General discipline) and/or a legend 
+category specific to disciplines (located at the beginning of a discipline), 
+and/or a legend category specific to a sheet (located on that sheet). 
+Note: The project needs dictate how legends are formatted for the 
+project set and shall be consistent across all disciplines. 
+5.2.7 Key Plan 
+The key plan when used in the discipline drawing set shall be defined as a 
+note block category titled KEY PLAN. When a key plan is shown, the 
+location shall always be in the lower right of the drawing area, and the 
+minimum size shall be 4 drawing modules wide and 3 drawing modules 
+high (see Figure 5-7). 
+5.3 Callouts 
+Callouts are similar to keynotes, but they refer to a feature or schedule 
+instead of a note. Callouts are useful when there is a lot of text to be placed 
+that may clutter or confuse the intent of the drawing. Callouts shall use a 
+1/4" minimum diameter circle with a minimum 3/32" high numerical or 
+alphabetical character inside (Figure 5-15). 
+ERDC/ITL SR-23-1 
+63 
+Figure 5-15. Callout symbol (with and without leader). 
+5.4 Notes with Leader(s) 
+When placing notes with a leader, if the note is placed on the left side of 
+the object, the leader line shall start from the lowest line of text. If the note 
+is placed on the right side of the object, the leader line shall start from the 
+highest line of text. Regardless of which side the note is on, all text shall be 
+left justified. Leader landings of notes shall be aligned (Figure 5-16). 
+Figure 5-16. Location and alignment of note leaders. 
+ERDC/ITL SR-23-1 
+64 
+5.5 Dimensions 
+5.5.1 Dimension Placement 
+Dimension values shall always be placed above the dimension line, 
+preferably midway between the dimension terminators (Figure 5-17). The 
+dimension line shall never be broken to insert the dimension, apart from 
+angular dimensioning. It is preferred that dimensions always be placed 
+outside the view, located at the top and/or the right side of the plans. 
+Dimensions shall apply to one view only (i.e., no shared dimensions 
+between views). The dimension shall be placed on the view that shows its 
+true length. Exploded dimensions or dimensions where the dimension text 
+has been edited are strongly discouraged except for the following: where 
+software limitations prevent users from providing the appropriate 
+dimensioning, where the dimension is intended to be an approximation 
+and is notated as such, or where a dimension is displayed as a 
+mathematical formula. An exploded dimension for the sole purpose of 
+displaying a value different from the actual measured value is strictly 
+prohibited. 
+Figure 5-17. Positioning of text in dimensions. 
+5.5.2 Graphic Settings 
+Dimensions shall be spaced a minimum of 4 × TH (where TH = dimension 
+text height) from the outlines of the view (shown as dimension “A” in 
+Figure 5-18). Dimension extension lines shall be offset a minimum of 0.5 × 
+TH from the element being dimensioned (dimension “B” in Figure 5-18). 
+Extension lines shall extend 0.5 × TH beyond the dimension line 
+(dimension “C” in Figure 5-18). Parallel dimension lines shall be spaced at 
+least 3 × TH between lines (Figure 5-19). Extension lines that cross other 
+extension lines or dimension lines shall be masked considering that if a 
+ERDC/ITL SR-23-1 
+65 
+dimension is dropped or exploded, the dimension will lose its association 
+to the element. The numeral size in dimensions shall match the height of 
+the text in the drawing. 
+Figure 5-18. Dimension settings. 
+Figure 5-19. Parallel dimension line spacing. 
+Continuous or staggered dimension lines may be used, depending on 
+convenience and readability; however, continuous dimension lines are 
+preferred. 
+5.5.3 Dimension Terminators 
+Slashes or filled arrowheads are allowed for dimension terminators. Filled 
+arrowhead terminators shall have an arrowhead width of 1.5 × TH and a 
+height of 0.5 × TH (Figure 5-20). 
+ERDC/ITL SR-23-1 
+66 
+Figure 5-20. Filled arrowhead terminators. 
+For slash terminators, the slash shall be at an angle of 45 degrees with a 
+height equal to the current text height (Figure 5-21). 
+Note: Dimension terminator selection shall be consistent across the 
+entire set of drawings. 
+Figure 5-21. Slash terminators. 
+5.5.4 Fractions 
+All fractions on the drawing shall be inline (not stacked) (Figure 5-22). 
+Fractions shall not be less than 1/16 in. (1.5 mm) because accuracy in the 
+field rarely requires more precision. Decimal values shall always have a 
+leading zero before the decimal point when values are less than 1. 
+ERDC/ITL SR-23-1 
+67 
+Generally, architectural construction dimensions are shown in feet and 
+inches (e.g., 50'6"). Civil construction dimensions are shown in feet and 
+hundredths of feet (e.g., 50.50'). Decimals of a foot shall be used where 
+dimensions are being set by surveying equipment, such as beam spacing, 
+foundation locations, and structure widths. Details are typically 
+architectural in nature. 
+Figure 5-22. Fraction format. 
+5.5.5 Graphic Settings 
+Line width settings for dimensions shall follow those shown in Table 5-7 
+and Figure 5-23. 
+Table 5-7. Dimension element settings. 
+Identifier 
+Dimension Element 
+Line Width (mm) 
+A 
+Dimension text 
+B 
+Terminators 
+N/A* 
+0.35 
+C 
+Extension lines 
+0.25 
+D 
+Dimension lines 
+0.25 
+* Not Applicable for TrueType fonts. 
+ERDC/ITL SR-23-1 
+68 
+Figure 5-23. Dimension element settings. 
+5.5.6 Dimensioning in Metric (SI) 
+Methodologies for dimensioning metric (SI) drawings are based upon the 
+recommendations of the former Construction Metrication Council of 
+NIBS, Washington, DC. These recommendations comply with the 
+American Society for Testing and Materials (ASTM) E 621-94 (ASTM 
+1999—withdrawn 2008). 
+ERDC/ITL SR-23-1 
+69 
+5.5.6.1 Millimeters 
+For metric vertical design, the unit of measure is typically millimeters. 
+Unit notations are unnecessary and should not be used. The dimension is 
+provided as a whole number as shown in Figure 5-24. Also, a note shall be 
+added to the drawing stating, “All dimensions and/or dimensions shown 
+in callouts/notes are in millimeters unless otherwise noted.” 
+Figure 5-24. Dimension in millimeters, always shown as a whole number. 
+Note: In circumstances where very small dimensions are used (e.g., 
+machine details), it is permissible to use real numbers for millimeter 
+dimensions. A note shall be placed on the detail regarding this fact. 
+5.5.6.2 Meters 
+For metric horizontal design, the unit of measure is typically meters. 
+Where greater accuracy is required, show dimensions to three decimal 
+places (Figure 5-25). A note shall be added to the drawing stating, “All 
+dimensions and/or dimensions shown in callouts/notes are in meters 
+unless otherwise noted.” 
+When meter measurements are included on the same sheet as millimeter 
+measurements, the meter dimension is provided as a real number taken to 
+three places past the decimal point (Figure 5-17). Again, unit notations are 
+unnecessary. 
+Figure 5-25. Dimension in meters, always shown as a real number (with decimal). 
+5.5.6.3 Large Units of Measure 
+Commas shall not be used when providing large units of measure; instead, 
+a space replaces the traditional comma in numbers containing four or 
+ERDC/ITL SR-23-1 
+70 
+more digits (e.g., the number 5,000 is displayed as 5 000, the number 
+45,000 is displayed as 45 000). This method is shown in Figure 5-26. 
+Figure 5-26. Proper dimension presentations for metric measurements 
+with four or more digits. 
+Note: The automatic dimensioning features of AutoCAD do not allow 
+users to replace commas with spaces in dimension text, otherwise the 
+associative properties of the dimension to the object being dimensioned 
+would have to be overridden. Until AutoCAD includes a dimension setting 
+to allow this, AutoCAD users are not mandated to follow this 
+requirement. 
+5.5.6.4 Dual Units 
+To avoid confusion, dual units (both inch-pound and metric) shall not be 
+used. As stated in Construction Metrication Council (1998), the use of dual 
+units “increases dimensioning time, doubles the chance for errors, makes 
+drawings more confusing, and only postpones the (metric) learning 
+process.” 
+Exceptions to this include certain “standard building designs” where dual 
+dimensions ensure that the design can be used in either SI or inch-pound 
+projects and in situations where products/components used in an SI 
+project are available only as inch-pound products (Construction 
+Metrication Council 1998). 
+5.6 Elevations 
+Elevations shall be indicated with no more than two decimal places (e.g., 
+EL 241.56 or EL 123.00). 
+5.7 Alignments 
+Alignment major stationing intervals shall be annotated with whole 
+numbers and a “+” symbol between the hundreds and tens digit with no 
+decimal places. Major station interval distance is 25 ft minimum or a 
+ERDC/ITL SR-23-1 
+71 
+multiple of 25 ft (e.g., 0+00, 0+25, 0+50, 0+75, 1+00, etc.). Typically, 
+minor stationing interval distance is set to one-fifth of the major stationing 
+interval and is not annotated. 
+Note: For metric, use whole meters, and the “+” symbol is placed 
+between the decameter and hectometer digit (e.g., 150+00 for the 15 km 
+station). 
+Alignment geometry points are annotated similarly to major stationing 
+intervals, except the distance begins with “STA” and may have up to two 
+decimal places (e.g., STA 50+25.43). 
+Note: For metric, use three decimal places, and the “+” symbol is placed 
+between the decameter and hectometer digit (e.g., STA 150+00.125 for 
+the 15.000125 km station). 
+5.8 Match Lines 
+As mentioned in Section 4.3, match lines shall use a 0.70 mm line width 
+and line style “014200-914 Centerline.” The text for the match line shall be 
+subtitle height (1/8 in.) per the NCS (Figure 5-27) and placed anywhere 
+along the match line for plan legibility. However, since it is apparent from 
+the text “MATCH LINE” that the reviewer will be required to go to another 
+sheet to see the continuation, the word “SEE” required by the NCS is 
+redundant and not required. At a minimum, use “XX/X-XXX” only when 
+there are multiple drawing views on the referenced sheet and “X-XXX” 
+when there is only one (see Figure 5-28 for information on these fields). 
+ERDC/ITL SR-23-1 
+72 
+Figure 5-27. Match lines. 
+Figure 5-28. Format for match line fields. 
+ERDC/ITL SR-23-1 
+73 
+6 Schedules 
+6.1 Features of a Schedule 
+The purpose of a schedule (or table) is to relay more detailed information 
+about items shown in the drawing set. At a bare minimum, “a schedule 
+consists of four parts—a subject title (Heading), a column identifying an 
+item (Mark), a column for the description of an item (Item Description), 
+and a column for indicating some notable characteristic (Distinguishing 
+Feature)” (Figure 6-1) (UDS Module 3—Schedules CSI 2014). While a 
+minimum of three columns is required in a schedule, additional columns 
+are allowed (UDS Module 3—Schedules CSI 2014). 
+Figure 6-1. Schedule. 
+6.2 Graphic Settings 
+As far as graphic conventions for schedules, schedules shall have the 
+following line widths and text heights (Figure 6-2): 
+• Schedule outlines: extra-wide line (0.70 mm) 
+• Schedule grid lines: medium line (0.35 mm) 
+• Schedule headings: 3/16 in. (5 mm) 
+• Schedule subheadings: 1/8 in. (3 mm) 
+• Schedule text: 3/32 in. (2.4 mm) 
+ERDC/ITL SR-23-1 
+74 
+Figure 6-2. Schedule linework and text. 
+6.3 Excel Schedules 
+For Excel spreadsheets imported for use as schedules, the following 
+settings shall be followed (Figure 6-3): 
+• Schedule headings: use Arial with a font size of 19. 
+• Schedule subheadings: use Arial with a font size of 12. 
+• Schedule text: use Arial with a font size of 10. 
+• Use linked/embedded schedules with a scale of 1. 
+• Horizontal grid lines shall be “All Borders” (Figure 6-4). 
+• Outlines around the exterior of the schedule shall be “Thick Outside 
+Borders” (Figure 6-4). 
+Figure 6-3. Excel example. 
+ERDC/ITL SR-23-1 
+75 
+Figure 6-4. Excel border settings. 
+ERDC/ITL SR-23-1 
+76 
+7 Drawing Revisions 
+7.1 Revision Designations 
+During development of CAD contract drawings, revisions are inevitable. 
+There are two different designations for these types of revisions: 
+amendments and modifications. Amendments are revisions that occur 
+during the contract advertisement period. Modifications are revisions that 
+are made after the award of a construction contract. For more information 
+on as-built revisions, see ERDC/ITL SR-21-6, Record Package Guidance: 
+Best Practices (or most current version), available on the CAD/BIM 
+Technology Center’s website.  
+7.2 Revision Graphics 
+All revisions shall be flagged by a revision indicator (Figure 7-1). This 
+indicator shall be an equilateral triangle. 
+Figure 7-1. Revision indicator with revision cloud. 
+The revision shall be enclosed in a revision cloud drawn at medium 
+thickness (0.35 mm). The revision indicator shall be positioned adjacent to 
+the revision cloud. The revision indicator shall contain sequential numbers 
+ERDC/ITL SR-23-1 
+77 
+for amendments (i.e., 1, 2, 3) or sequential capitalized alphabetical 
+characters for modifications (i.e., A, B, C). 
+7.3 Revision (Issue) Block 
+The Revision (Issue) block (Figure 7-2) contains a history of revisions to 
+the sheet. It is made up of three fields that contain information about each 
+amendment or modification: MARK, DESCRIPTION, and DATE. All text 
+placed within this block shall be 3/32 in. high. 
+Figure 7-2. Revision (Issue) block. 
+MARK: The MARK column shall contain either a numeric Amendment 
+character (1, 2, 3, etc.) or an upper-case alphabetic Modification character 
+(A, B, C, etc.). These characters shall relate to revision symbols (equilateral 
+triangles) with the same corresponding characters found on the sheet. The 
+first Amendment or Modification character shall be placed on the lowest 
+line of the Revision (Issue) block, and subsequent entries shall be made 
+above it. 
+DESCRIPTION: The DESCRIPTION column shall present brief 
+information related to the Amendment or Modification that directs the 
+reader to more detailed information found in a revision document (e.g., 
+REVISED IN ACCORDANCE WITH AMDT 0004, GENERAL REVISIONS 
+MOD 0006, REVISED TO SHOW AS-BUILT CONDITIONS). The 
+DESCRIPTION column shall not be used to provide lengthy information 
+about the revision. Although not required (or recommended), the initials 
+of the designer who made the revision may be provided beside the 
+Description (e.g., REVISED IN ACCORDANCE WITH AMDT 0001—
+WDG). 
+ERDC/ITL SR-23-1 
+78 
+DATE: The DATE column contains the date (month and year) the revision 
+was released in the change documentation. All dates shall be in the 
+following format: MMM YYYY (e.g., OCT 2020, JUN 2022) 
+Note: An APPR. column is not provided in the Revision (Issue) block due 
+to lack of consistency in its use. Currently, there is no consistent 
+legal/management direction on how to enforce this field. Initials are text 
+placed in this field using CAD, so there is no method for legal tracking of 
+the data. If showing who approved revisions becomes a requirement, a 
+legal signature (physical or electronic) should be required, as well as 
+direction for consistent usage. 
+The Revision (Issue) block provided by the CAD/BIM Technology Center 
+provides eight rows for identifying revisions. There are two possible 
+options for dealing with situations where more than eight revisions are 
+required: 
+• Option 1 (Preferred): Replace the oldest revision in the Revision 
+(Issue) block with the most current revision and continue replacing 
+revisions as needed (Figure 7-3). If needed, older revisions can be 
+copied outside the plotted area of the sheet for record purposes. 
+Figure 7-3. Option 1 for showing more than eight revisions. 
+• Option 2: Continue adding revisions directly above the eighth revision 
+row so that they begin to spill out into the Drawing Area (Figure 7-4). 
+This is not the preferred option, as it runs the risk of running into 
+items that may be placed into this section of the Drawing Area. 
+ERDC/ITL SR-23-1 
+79 
+Figure 7-4. Option 2 for showing more than eight revisions. 
+Note: The option that is chosen shall remain consistent across the entire 
+drawing set. 
+ERDC/ITL SR-23-1 
+80 
+8 Conclusion 
+Standards have been recognized as a vital tool in the development of 
+drawings for DoD. Without standards, drawings would be hard to create, 
+review, and interpret, resulting in excessive time and monetary costs for 
+DoD. With these factors in mind, the A/E/C Graphics Standard has been 
+an important document for DoD since 2012 by serving as the standard for 
+the look and organization of drawings. 
+ERDC/ITL SR-23-1 
+81 
+References 
+American Society for Testing and Materials. 1999 (withdrawn 2008). Standard Practice 
+for the Use of Metric (SI) Units in Building Design and Construction (Committee 
+E-6 Supplement to E380). ASTM E 621-94. Philadelphia, PA. 
+CAD/BIM Technology Center for Facilities, Infrastructure, and Environment. 2019. 
+A/E/C CAD Standard, Release 6.1. Vicksburg, MS: US Army Engineer Research 
+and Development Center. 
+Construction Metrication Council. 1998. Construction Metrication 7 (1). Washington, DC: 
+National Institute of Building Sciences. 
+CSI (Construction Specifications Institute). 2014. Uniform Drawing System: U.S. 
+National CAD Standard Version 6.0. Alexandria, VA: Construction 
+Specifications Institute. www.nationalcadstandard.org/ncs6/. 
+National Park Service. 2001. “Guideline for Preparation of Design and Construction 
+Drawings.” Reference Manual 10A. Denver, CO. 
+SMACNA (Sheet Metal and Air Conditioning Contractors’ National Association, Inc.). 
+2001. SMACNA CAD Standard. 2nd ed. Chantilly, VA. 
+Spangler, Stephen C. 2019. A/E/C Graphics Standard: Release 2.1. Technical report. 
+ERDC/ITL TR-19-6. Vicksburg, MS: US Army Corps of Engineers. 
+US Army Corps of Engineers. 2006. Graphic Standards Manual. EP 310-1-6. Washington 
+DC: Headquarters, US Army Corps of Engineers. 
+US Army Engineer District, Baltimore. 2008. Enterprise CADD Standards, Version 4.1. 
+Baltimore, MD. 
+US Army Engineer District, Far East. 2008. A/E/C CADD Standard Supplement. Seoul, 
+South Korea. 
+US Army Engineer District, Jacksonville. 1976. Jacksonville District Drafting Standards. 
+Jacksonville, FL. 
+US Army Engineer District, Vicksburg. 1969. Drafting Standards Manual. Vicksburg, 
+MS. 
+ERDC/ITL SR-23-1 
+82 
+Abbreviations 
+A/E/C 
+AIA  
+ANSI  
+ASTM  
+BIM  
+CAD  
+CADD 
+CIM  
+CoP  
+CSI  
+CUI  
+DoD  
+ERDC  
+FAQ  
+FOA  
+ft  
+GSA  
+in.  
+ITL  
+Architecture/engineering/construction 
+American Institute of Architects 
+American National Standards Institute 
+American Society for Testing and Materials 
+Building information modeling 
+Computer-aided design 
+Computer-aided design and drafting 
+Civil Information Modeling 
+Community of practice 
+Construction Specifications Institute 
+Controlled Unclassified Information 
+Department of Defense 
+Engineer Research and Development Center 
+Frequently asked questions 
+Field operating activity 
+Foot/feet 
+General Services Administration 
+Inch(es) 
+Information Technology Laboratory 
+ERDC/ITL SR-23-1 
+83 
+m  
+mm  
+NCS  
+NIBS  
+O&M  
+POC  
+SEID  
+Meter 
+Millimeter 
+National CAD Standard 
+National Institute of Building Sciences 
+Operations and maintenance 
+Point of contact 
+Software Engineering and Informatics Division 
+SMACNA Sheet Metal and Air Conditioning Contractors National 
+Association 
+TH  
+USACE 
+Text height 
+US Army Corps of Engineers 
+ 
+REPORT DOCUMENTATION PAGE (SF 29REPORT DOCUMENTATION PAGE 
+1. REPORT DATE 
+August 2023 
+2. REPORT TYPE 
+Special report 
+3. DATES COVERED 
+START DATE 
+FY22 
+END DATE 
+FY23 
+4. TITLE AND SUBTITLE 
+A/E/C Graphics Standard: 
+Release 2.2 
+5a. CONTRACT NUMBER 5b. GRANT NUMBER 5c. PROGRAM ELEMENT 
+5d. PROJECT NUMBER 5e. TASK NUMBER 5f. WORK UNIT NUMBER 
+6. AUTHOR(S) 
+Stephen C. Spangler, Roger Fujan, Gerald Piotrowski, and Brian Baker 
+7. PERFORMING ORGANIZATION NAME(S) AND ADDRESS(ES) 
+US Army Engineer Research and Development Center 
+Information Technology Laboratory 
+3909 Halls Ferry Road 
+Vicksburg, Mississippi 39180-6199 
+ 
+US Army Corps of Engineers, Walla Walla District 
+3200 Reservoir Road 
+Walla Walla, WA 99362 
+ 
+US Army Corps of Engineers, Louisville District 
+600 Dr. Martin Luther King Jr. Place 
+Louisville, KY 40202-2239 
+ 
+US Army Corps of Engineers, Pittsburgh District 
+1000 Liberty Ave. 
+Pittsburgh, PA 15222-4004 
+8. PERFORMING ORGANIZATION 
+REPORT NUMBER 
+ERDC/ITL SR-23-1 
+9. SPONSORING/MONITORING AGENCY NAME(S) AND ADDRESS(ES) 
+Headquarters, US Army Corps of Engineers 
+Washington, DC 20314-1000 
+10. SPONSOR/MONITOR'S 
+ACRONYM(S) 
+HQUSACE 
+11. SPONSOR/MONITOR'S 
+REPORT NUMBER(S) 
+ 
+12. DISTRIBUTION/AVAILABILITY STATEMENT 
+DISTRIBUTION STATEMENT A. Approved for public release; distribution is unlimited. 
+13. SUPPLEMENTARY NOTES 
+Civil Direct Funding 
+14. ABSTRACT 
+The A/E/C Graphics Standard has been developed by the Computer-Aided Design/Building Information Modeling Technology Center to 
+document how proper hand-drafting practices can be achieved in advanced modeling. It is through the collection and documentation of 
+these practices that consistent models and drawings shall be achieved throughout the US Army Corps of Engineers (USACE), as well as 
+other federal agencies. In the collection of these practices, various historical USACE District drafting manuals were consulted and 
+compared against practices contained in industry and national standards, with consideration toward whether software can achieve those 
+practices. The documentation of these practices will help to achieve both clear and aesthetically pleasing construction documents. 
+15. SUBJECT TERMS 
+Building information modeling; Computer-aided design; Computer graphics; Engineering design 
+16. SECURITY CLASSIFICATION OF: 17. LIMITATION OF ABSTRACT 
+SAR 
+18. NUMBER OF PAGES 
+96 a. REPORT 
+Unclassified 
+b. ABSTRACT 
+Unclassified 
+C. THIS PAGE 
+Unclassified 
+19a. NAME OF RESPONSIBLE PERSON 
+ 
+19b. TELEPHONE NUMBER (include area code) 
+ 
+Report Documentation Page (SF 298) STANDARD FORM 298 (REV. 5/2020) 
+PREVIOUS EDITION IS OBSOLETE.Prescribed 
+by ANSI Std. Z39.1 
