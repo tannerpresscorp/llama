@@ -1,0 +1,60 @@
+name: Reusable npm publish
+
+on:
+  workflow_call:
+
+jobs:
+  publish:
+    name: Publish npm package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Detect npm package
+        id: package
+        shell: bash
+        run: |
+          if [[ ! -f package.json ]]; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "No package.json found; skipping npm publish."
+            exit 0
+          fi
+
+          echo "publish=true" >> "$GITHUB_OUTPUT"
+
+      - name: Set up pnpm
+        if: steps.package.outputs.publish == 'true'
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Set up Node.js
+        if: steps.package.outputs.publish == 'true'
+        uses: actions/setup-node@v5.0.0
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        if: steps.package.outputs.publish == 'true'
+        shell: bash
+        run: |
+          if [[ -f pnpm-lock.yaml ]]; then
+            pnpm install --frozen-lockfile
+          else
+            pnpm install --no-frozen-lockfile
+          fi
+
+      - name: Pack package
+        if: steps.package.outputs.publish == 'true'
+        run: pnpm pack --pack-destination /tmp/npm-package
+
+      - name: Publish package
+        if: steps.package.outputs.publish == 'true'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm publish --no-git-checks --access public --provenance
