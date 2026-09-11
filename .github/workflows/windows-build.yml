@@ -1,0 +1,21 @@
+name: Windows Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Build
+        shell: pwsh
+        run: |
+          Write-Host "No build system is currently defined for this repository."
