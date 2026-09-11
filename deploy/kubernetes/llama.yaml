@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: llama-server
-          image: ghcr.io/OWNER/llama-inference:latest
+          image: ghcr.io/REPOSITORY_OWNER/llama-inference:latest
           imagePullPolicy: IfNotPresent
           env:
             - name: LLAMA_HOST
