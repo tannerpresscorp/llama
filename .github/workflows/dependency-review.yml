@@ -6,6 +6,7 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  issues: write
 
 jobs:
   dependency-review:
@@ -15,6 +16,37 @@ jobs:
         uses: actions/checkout@v7.0.1
 
       - name: Review dependency changes
+        id: dependency_review
         uses: actions/dependency-review-action@v5.0.0
         with:
           comment-summary-in-pr: always
+
+      - name: Create issue when dependency review fails
+        if: always() && steps.dependency_review.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          existing_issue_number="$(
+            gh issue list \
+              --repo "${{ github.repository }}" \
+              --state open \
+              --search "\"Dependency review failed for PR #${{ github.event.pull_request.number }}\" in:title" \
+              --json number \
+              --jq '.[0].number'
+          )"
+
+          if [ -n "$existing_issue_number" ]; then
+            echo "Open issue #$existing_issue_number already exists for PR #${{ github.event.pull_request.number }}."
+            exit 0
+          fi
+
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "Dependency review failed for PR #${{ github.event.pull_request.number }}" \
+            --body "$(cat <<'EOF'
+          The dependency review workflow failed for pull request #${{ github.event.pull_request.number }}.
+
+          Pull request: ${{ github.event.pull_request.html_url }}
+          Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          EOF
+          )"
