@@ -17,5 +17,4 @@ jobs:
 
       - name: Build
         shell: pwsh
-        run: |
-          Write-Host "No build system is currently defined for this repository."
+        run: repo:tannerpresscorp@136050734/llama@1365782458
