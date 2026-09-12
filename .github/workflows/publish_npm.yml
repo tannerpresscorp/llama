@@ -19,3 +19,7 @@ jobs:
     name: Publish to npm
     uses: ./.github/workflow-templates/npm-publish.yml
     secrets: inherit
+    steps:
+     - run: npm publish
+     if: github.event_name == 'push'
+    
